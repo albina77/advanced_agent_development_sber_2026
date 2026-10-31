@@ -1,0 +1,15 @@
+{
+  "source_id": "savings",
+  "requested_url": "https://www.sberbank.ru/ru/person/contributions/accounts/nakopitelny",
+  "final_url": "https://www.sberbank.ru/ru/person/contributions/accounts/nakopitelny",
+  "fetched_at": "2026-10-26T13:31:03.959242+00:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8, text/html",
+  "sha256": "ac90fdb6f3a79f68a7c1ef6e29b889654d9ea670d9a59da239b1ba030054dbbf",
+  "text": "sberbank.ru\nВозникла проблема при открытии сайта Сбербанка в этом браузере.\nВозможно у Вас не установлены сертификаты Национального УЦ Минцифры России.\nОзнакомиться с инструкциями по установке можно на\nhttps://www.gosuslugi.ru/crt\nЛибо попробуйте войти на сайт в другом браузере по ссылке\nhttps://www.sberbank.com/ru/certificates\nЕсли ошибка повторится позвоните нам по номеру 900 или + 7495 500-55-50, если Вы за границей, и сообщите ваш Support ID\nSupport ID:\n<\n7326755161247142963>\n[Назад]",
+  "links": [
+    "https://www.gosuslugi.ru/crt",
+    "https://www.sberbank.com/ru/certificates",
+    "javascript:history.back();"
+  ]
+}

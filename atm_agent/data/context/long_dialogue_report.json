@@ -1,0 +1,3476 @@
+{
+  "passed": true,
+  "turns": [
+    {
+      "response": "Здравствуйте! Могу помочь снять или внести наличные и показать баланс.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "greeting",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": null,
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2164,
+        "preflight_after": 2164,
+        "window_messages": 0,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 58,
+        "input_tokens": 1828,
+        "total_tokens": 1886,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 1,
+      "text": "Здравствуйте!",
+      "budget": {
+        "turn": 1,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2164,
+          "preflight_after": 2164,
+          "window_messages": 0,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 58,
+              "input_tokens": 1828,
+              "total_tokens": 1886,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2164,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1022.406458039768
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 58,
+          "input_tokens": 1828,
+          "total_tokens": 1886,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2164,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Какую сумму хотите снять?",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "withdraw",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw"
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2221,
+        "preflight_after": 2221,
+        "window_messages": 2,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 137,
+        "input_tokens": 1884,
+        "total_tokens": 2021,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 2,
+      "text": "Хочу снять наличные. Деньги нужны на дорогу, к этой задаче ещё вернёмся.",
+      "budget": {
+        "turn": 2,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2221,
+          "preflight_after": 2221,
+          "window_messages": 2,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 137,
+              "input_tokens": 1884,
+              "total_tokens": 2021,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2221,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1424.4687920436263
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 137,
+          "input_tokens": 1884,
+          "total_tokens": 2021,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2221,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Какими купюрами выдать? Можно на выбор банкомата. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "withdraw",
+        "amount": 7000,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2265,
+        "preflight_after": 2265,
+        "window_messages": 4,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 144,
+        "input_tokens": 1923,
+        "total_tokens": 2067,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 3,
+      "text": "Семь тысяч рублей.",
+      "budget": {
+        "turn": 3,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2265,
+          "preflight_after": 2265,
+          "window_messages": 4,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 144,
+              "input_tokens": 1923,
+              "total_tokens": 2067,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2265,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1459.5009579788893
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 144,
+          "input_tokens": 1923,
+          "total_tokens": 2067,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2265,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Баланс: 50000 ₽.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "balance",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2335,
+        "preflight_after": 2335,
+        "window_messages": 6,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 195,
+        "input_tokens": 1992,
+        "total_tokens": 2187,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 4,
+      "text": "Сначала покажи баланс.",
+      "budget": {
+        "turn": 4,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2335,
+          "preflight_after": 2335,
+          "window_messages": 6,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 195,
+              "input_tokens": 1992,
+              "total_tokens": 2187,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2335,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1761.6694159805775
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 195,
+          "input_tokens": 1992,
+          "total_tokens": 2187,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2335,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "А [sberprime-offer@2026-03-01, с. 1]\nБ [sberprime-offer@2026-03-01, с. 1]\nВ [sberprime-offer@2026-03-01, с. 1]\nГ [sberprime-offer@2026-03-01, с. 1]\nД [sberprime-offer@2026-03-01, с. 1]\nЕ [sberprime-offer@2026-03-01, с. 1]",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "product",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2399,
+        "preflight_after": 2399,
+        "window_messages": 8,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 838,
+        "input_tokens": 9219,
+        "total_tokens": 10057,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [
+        {
+          "chunk_id": "sberprime-offer@2026-03-01:p0001:c00",
+          "source_id": "sberprime-offer@2026-03-01",
+          "path": "docs/offer_01.03.2026.pdf",
+          "page": 1,
+          "quote": "-  Приложение   «Е»          –   условия   Договора,   применимые   при   Подключении   Подписки    Совладельцами Подписки."
+        }
+      ],
+      "rag_tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "приложения в договоре СберПрайм на 1 марта 2026 года",
+            "as_of": "2026-03-01",
+            "product": "sberprime",
+            "document_id": "sberprime-offer",
+            "source_id": ""
+          }
+        }
+      ],
+      "turn": 5,
+      "text": "Какие приложения входят в договор СберПрайм на 1 марта 2026 года? Перечисли только их буквы.",
+      "budget": {
+        "turn": 5,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2399,
+          "preflight_after": 2399,
+          "window_messages": 8,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 137,
+              "input_tokens": 2054,
+              "total_tokens": 2191,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2399,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1335.1184999919496
+          },
+          {
+            "stage": "tool_selection",
+            "usage": {
+              "output_tokens": 123,
+              "input_tokens": 1447,
+              "total_tokens": 1570,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "tool_selection",
+              "counted_tokens": 1589,
+              "overhead_reserve": 256,
+              "input_budget": 12000,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1536.747917009052
+          },
+          {
+            "stage": "grounded_answer",
+            "usage": {
+              "output_tokens": 578,
+              "input_tokens": 5718,
+              "total_tokens": 6296,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "grounded_answer",
+              "counted_tokens": 6299,
+              "overhead_reserve": 256,
+              "input_budget": 12000,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 4296.8594579724595
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 838,
+          "input_tokens": 9219,
+          "total_tokens": 10057,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2399,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "pause",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2593,
+        "preflight_after": 2593,
+        "window_messages": 10,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 151,
+        "input_tokens": 2240,
+        "total_tokens": 2391,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 6,
+      "text": "Купюры выберу позже, я пока разбираюсь с условиями.",
+      "budget": {
+        "turn": 6,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2593,
+          "preflight_after": 2593,
+          "window_messages": 10,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 151,
+              "input_tokens": 2240,
+              "total_tokens": 2391,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2593,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1665.110083995387
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 151,
+          "input_tokens": 2240,
+          "total_tokens": 2391,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2593,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": null,
+      "extracted": {
+        "relevance": "background",
+        "intent": "other"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2656,
+        "preflight_after": 2656,
+        "window_messages": 12,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 186,
+        "input_tokens": 2301,
+        "total_tokens": 2487,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 7,
+      "text": "Уважаемые пассажиры! Объявляется посадка на рейс ФОН-9999 до Москвы.",
+      "budget": {
+        "turn": 7,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2656,
+          "preflight_after": 2656,
+          "window_messages": 12,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 186,
+              "input_tokens": 2301,
+              "total_tokens": 2487,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2656,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1551.1950420332141
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 186,
+          "input_tokens": 2301,
+          "total_tokens": 2487,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2656,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Могу помочь со снятием, внесением наличных и балансом.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "other",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2648,
+        "preflight_after": 2648,
+        "window_messages": 12,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 137,
+        "input_tokens": 2293,
+        "total_tokens": 2430,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 8,
+      "text": "Напомни, какие операции ты умеешь выполнять?",
+      "budget": {
+        "turn": 8,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2648,
+          "preflight_after": 2648,
+          "window_messages": 12,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 137,
+              "input_tokens": 2293,
+              "total_tokens": 2430,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2648,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1379.2638329905458
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 137,
+          "input_tokens": 2293,
+          "total_tokens": 2430,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2648,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "А [sberprime-offer@2026-09-30, с. 1]\nБ [sberprime-offer@2026-09-30, с. 1]\nВ [sberprime-offer@2026-09-30, с. 1]\nГ [sberprime-offer@2026-09-30, с. 1]\nД [sberprime-offer@2026-09-30, с. 1]\nЕ [sberprime-offer@2026-09-30, с. 1]\nЖ [sberprime-offer@2026-09-30, с. 1]",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "product",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2717,
+        "preflight_after": 2717,
+        "window_messages": 14,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 979,
+        "input_tokens": 10288,
+        "total_tokens": 11267,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [
+        {
+          "chunk_id": "sberprime-offer@2026-09-30:p0001:c00",
+          "source_id": "sberprime-offer@2026-09-30",
+          "path": "docs/offer.pdf",
+          "page": 1,
+          "quote": "•       Приложение          «Д»    –   условия     Договора,      применимые         при    Подключении         Подписки СберПрайм3 в рамках Пакета услуг."
+        },
+        {
+          "chunk_id": "sberprime-offer@2026-09-30:p0001:c01",
+          "source_id": "sberprime-offer@2026-09-30",
+          "path": "docs/offer.pdf",
+          "page": 1,
+          "quote": "•       Приложение «Ж» – условия Договора, применимые при Подключении Опций в рамках Подписки СберПрайм."
+        }
+      ],
+      "rag_tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "состав договора СберПрайм приложения 2026-09-30",
+            "as_of": "2026-09-30",
+            "product": "",
+            "document_id": "sberprime-offer",
+            "source_id": "sberprime-offer@2026-09-30"
+          }
+        }
+      ],
+      "turn": 9,
+      "text": "Какие приложения входят в договор СберПрайм на 30 сентября 2026 года? Перечисли только их буквы.",
+      "budget": {
+        "turn": 9,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2717,
+          "preflight_after": 2717,
+          "window_messages": 14,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 187,
+              "input_tokens": 2359,
+              "total_tokens": 2546,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2717,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1963.516665971838
+          },
+          {
+            "stage": "tool_selection",
+            "usage": {
+              "output_tokens": 137,
+              "input_tokens": 1752,
+              "total_tokens": 1889,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "tool_selection",
+              "counted_tokens": 1907,
+              "overhead_reserve": 256,
+              "input_budget": 12000,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1431.611875013914
+          },
+          {
+            "stage": "grounded_answer",
+            "usage": {
+              "output_tokens": 655,
+              "input_tokens": 6177,
+              "total_tokens": 6832,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "grounded_answer",
+              "counted_tokens": 6792,
+              "overhead_reserve": 256,
+              "input_budget": 12000,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 4357.480290986132
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 979,
+          "input_tokens": 10288,
+          "total_tokens": 11267,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2717,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "pause",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "",
+      "summary_revision": null,
+      "summary_citations": [],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2936,
+        "preflight_after": 2936,
+        "window_messages": 16,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 145,
+        "input_tokens": 2569,
+        "total_tokens": 2714,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 10,
+      "text": "Пока не выдавай деньги, я ещё выбираю купюры.",
+      "budget": {
+        "turn": 10,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2936,
+          "preflight_after": 2936,
+          "window_messages": 16,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 145,
+              "input_tokens": 2569,
+              "total_tokens": 2714,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2936,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1732.1601249859668
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 145,
+          "input_tokens": 2569,
+          "total_tokens": 2714,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2936,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Баланс: 50000 ₽.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "balance",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Клиент поздоровался, запросил снятие 7000 ₽ на дорогу, затем попросил показать баланс — 50000 ₽. Купюрность не выбрана, предпочтение не зафиксировано. Далее уточнил состав СберПрайм на 01.03.2026; перечислены буквы А, Б, В, Г, Д, Е. Разговор о снятии и о дороге не завершён, к задаче обещано вернуться.",
+      "summary_revision": 1,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "summarize",
+        "preflight_before": 2985,
+        "preflight_after": 2706,
+        "window_messages": 8,
+        "folded_messages": 10,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 286,
+        "input_tokens": 3046,
+        "total_tokens": 3332,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 11,
+      "text": "Какой у меня сейчас баланс?",
+      "budget": {
+        "turn": 11,
+        "context": {
+          "action": "summarize",
+          "preflight_before": 2985,
+          "preflight_after": 2706,
+          "window_messages": 8,
+          "folded_messages": 10,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "summarize",
+            "usage": {
+              "output_tokens": 99,
+              "input_tokens": 694,
+              "total_tokens": 793,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "summarize",
+              "counted_tokens": 752,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 384,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1284.2526250169612
+          },
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 187,
+              "input_tokens": 2352,
+              "total_tokens": 2539,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2706,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1631.3615839462727
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 286,
+          "input_tokens": 3046,
+          "total_tokens": 3332,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 2985,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Какими купюрами выдать? Можно на выбор банкомата.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "details",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Клиент поздоровался, запросил снятие 7000 ₽ на дорогу, затем попросил показать баланс — 50000 ₽. Купюрность не выбрана, предпочтение не зафиксировано. Далее уточнил состав СберПрайм на 01.03.2026; перечислены буквы А, Б, В, Г, Д, Е. Разговор о снятии и о дороге не завершён, к задаче обещано вернуться.",
+      "summary_revision": 1,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2753,
+        "preflight_after": 2753,
+        "window_messages": 10,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 144,
+        "input_tokens": 2396,
+        "total_tokens": 2540,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 12,
+      "text": "Я могу сама указать номинал купюр?",
+      "budget": {
+        "turn": 12,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2753,
+          "preflight_after": 2753,
+          "window_messages": 10,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 144,
+              "input_tokens": 2396,
+              "total_tokens": 2540,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2753,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1685.3132499963976
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 144,
+          "input_tokens": 2396,
+          "total_tokens": 2540,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3058,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": null,
+      "extracted": {
+        "relevance": "background",
+        "intent": "other"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Клиент поздоровался, запросил снятие 7000 ₽ на дорогу, затем попросил показать баланс — 50000 ₽. Купюрность не выбрана, предпочтение не зафиксировано. Далее уточнил состав СберПрайм на 01.03.2026; перечислены буквы А, Б, В, Г, Д, Е. Разговор о снятии и о дороге не завершён, к задаче обещано вернуться.",
+      "summary_revision": 1,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2813,
+        "preflight_after": 2813,
+        "window_messages": 12,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 56,
+        "input_tokens": 2453,
+        "total_tokens": 2509,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 13,
+      "text": "Сосед, возьми пять тысяч из моей сумки. Это я тебе говорю, не банкомату.",
+      "budget": {
+        "turn": 13,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2813,
+          "preflight_after": 2813,
+          "window_messages": 12,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 56,
+              "input_tokens": 2453,
+              "total_tokens": 2509,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2813,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1257.648665981833
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 56,
+          "input_tokens": 2453,
+          "total_tokens": 2509,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3118,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "pause",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Клиент поздоровался, запросил снятие 7000 ₽ на дорогу, затем попросил показать баланс — 50000 ₽. Купюрность не выбрана, предпочтение не зафиксировано. Далее уточнил состав СберПрайм на 01.03.2026; перечислены буквы А, Б, В, Г, Д, Е. Разговор о снятии и о дороге не завершён, к задаче обещано вернуться.",
+      "summary_revision": 1,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2806,
+        "preflight_after": 2806,
+        "window_messages": 12,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 187,
+        "input_tokens": 2446,
+        "total_tokens": 2633,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 14,
+      "text": "Мне нужно немного времени подумать. К снятию вернёмся позже.",
+      "budget": {
+        "turn": 14,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2806,
+          "preflight_after": 2806,
+          "window_messages": 12,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 187,
+              "input_tokens": 2446,
+              "total_tokens": 2633,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2806,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1827.6831670082174
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 187,
+          "input_tokens": 2446,
+          "total_tokens": 2633,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3111,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "По этому вопросу подходящих записей памяти не найдено.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "memory_recall",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Клиент поздоровался, запросил снятие 7000 ₽ на дорогу, затем попросил показать баланс — 50000 ₽. Купюрность не выбрана, предпочтение не зафиксировано. Далее уточнил состав СберПрайм на 01.03.2026; перечислены буквы А, Б, В, Г, Д, Е. Разговор о снятии и о дороге не завершён, к задаче обещано вернуться.",
+      "summary_revision": 1,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2863,
+        "preflight_after": 2863,
+        "window_messages": 14,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 189,
+        "input_tokens": 2501,
+        "total_tokens": 2690,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 15,
+      "text": "Что ты помнишь о моих предпочтениях по купюрам?",
+      "budget": {
+        "turn": 15,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2863,
+          "preflight_after": 2863,
+          "window_messages": 14,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 189,
+              "input_tokens": 2501,
+              "total_tokens": 2690,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2863,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1742.296707991045
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 189,
+          "input_tokens": 2501,
+          "total_tokens": 2690,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3168,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Могу помочь со снятием, внесением наличных и балансом.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "other",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Клиент поздоровался, запросил снятие 7000 ₽ на дорогу, затем попросил показать баланс — 50000 ₽. Купюрность не выбрана, предпочтение не зафиксировано. Далее уточнил состав СберПрайм на 01.03.2026; перечислены буквы А, Б, В, Г, Д, Е. Разговор о снятии и о дороге не завершён, к задаче обещано вернуться.",
+      "summary_revision": 1,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2908,
+        "preflight_after": 2908,
+        "window_messages": 16,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 57,
+        "input_tokens": 2543,
+        "total_tokens": 2600,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 16,
+      "text": "Какими операциями здесь можно управлять текстом?",
+      "budget": {
+        "turn": 16,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2908,
+          "preflight_after": 2908,
+          "window_messages": 16,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 57,
+              "input_tokens": 2543,
+              "total_tokens": 2600,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2908,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1310.8682500314899
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 57,
+          "input_tokens": 2543,
+          "total_tokens": 2600,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3213,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Баланс: 50000 ₽.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "balance",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент просит не выдавать деньги и уточняет, что купюры выберет позже. Баланс — 50000 ₽. Клиент запросил перечень умений: снятие, внесение, баланс. По СберПрайм названы приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. К снятию обещано вернуться по команде «Продолжим снятие».",
+      "summary_revision": 2,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "summarize",
+        "preflight_before": 2957,
+        "preflight_after": 2576,
+        "window_messages": 8,
+        "folded_messages": 10,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 324,
+        "input_tokens": 3057,
+        "total_tokens": 3381,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 17,
+      "text": "Назови мой баланс ещё раз.",
+      "budget": {
+        "turn": 17,
+        "context": {
+          "action": "summarize",
+          "preflight_before": 2957,
+          "preflight_after": 2576,
+          "window_messages": 8,
+          "folded_messages": 10,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "summarize",
+            "usage": {
+              "output_tokens": 137,
+              "input_tokens": 831,
+              "total_tokens": 968,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "summarize",
+              "counted_tokens": 892,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 384,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1535.7317500165664
+          },
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 187,
+              "input_tokens": 2226,
+              "total_tokens": 2413,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2576,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 2651.3768329750746
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 324,
+          "input_tokens": 3057,
+          "total_tokens": 3381,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3262,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Сохранено предпочтение на 180 дней: купюры по 1000 ₽. При снятии уточню ваш выбор. Можно продолжить текущее снятие.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "preference",
+        "amount": null,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент просит не выдавать деньги и уточняет, что купюры выберет позже. Баланс — 50000 ₽. Клиент запросил перечень умений: снятие, внесение, баланс. По СберПрайм названы приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. К снятию обещано вернуться по команде «Продолжим снятие».",
+      "summary_revision": 2,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2631,
+        "preflight_after": 2631,
+        "window_messages": 10,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 274,
+        "input_tokens": 2692,
+        "total_tokens": 2966,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 18,
+      "text": "Запомни: обычно выдавай купюрами по 1000 рублей.",
+      "budget": {
+        "turn": 18,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2631,
+          "preflight_after": 2631,
+          "window_messages": 10,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 197,
+              "input_tokens": 2279,
+              "total_tokens": 2476,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2631,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1546.6752919601277
+          },
+          {
+            "stage": "preference",
+            "usage": {
+              "output_tokens": 77,
+              "input_tokens": 413,
+              "total_tokens": 490,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "preference",
+              "counted_tokens": 516,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 941.946083039511
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 274,
+          "input_tokens": 2692,
+          "total_tokens": 2966,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3342,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "pause",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент просит не выдавать деньги и уточняет, что купюры выберет позже. Баланс — 50000 ₽. Клиент запросил перечень умений: снятие, внесение, баланс. По СберПрайм названы приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. К снятию обещано вернуться по команде «Продолжим снятие».",
+      "summary_revision": 2,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2703,
+        "preflight_after": 2703,
+        "window_messages": 12,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 144,
+        "input_tokens": 2349,
+        "total_tokens": 2493,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 19,
+      "text": "В этот раз купюры я пока не подтвердила.",
+      "budget": {
+        "turn": 19,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2703,
+          "preflight_after": 2703,
+          "window_messages": 12,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 144,
+              "input_tokens": 2349,
+              "total_tokens": 2493,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2703,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1419.4821660057642
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 144,
+          "input_tokens": 2349,
+          "total_tokens": 2493,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3414,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": null,
+      "extracted": {
+        "relevance": "background",
+        "intent": "other"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент просит не выдавать деньги и уточняет, что купюры выберет позже. Баланс — 50000 ₽. Клиент запросил перечень умений: снятие, внесение, баланс. По СберПрайм названы приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. К снятию обещано вернуться по команде «Продолжим снятие».",
+      "summary_revision": 2,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2766,
+        "preflight_after": 2766,
+        "window_messages": 14,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 186,
+        "input_tokens": 2410,
+        "total_tokens": 2596,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 20,
+      "text": "Объявление в аэропорту: посадка на рейс ФОН-8888 завершена.",
+      "budget": {
+        "turn": 20,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2766,
+          "preflight_after": 2766,
+          "window_messages": 14,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 186,
+              "input_tokens": 2410,
+              "total_tokens": 2596,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2766,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1435.8548329910263
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 186,
+          "input_tokens": 2410,
+          "total_tokens": 2596,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3477,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Приложение «А» — условия Договора, применимые при Подключении Подписки с условием оплаты полной Стоимости Подписки. [sberprime-offer@2026-03-01, с. 1]\nПриложение «Б» — условия Договора, применимые при Подключении Подписки с использованием Промокода. [sberprime-offer@2026-03-01, с. 1]\nПриложение «В» — условия Договора, применимые при Подключении Подписки СберПрайм2 и СберПрайм+ в рамках Акции Банка или Акции Партнера. [sberprime-offer@2026-03-01, с. 1]\nПриложение «Г» — условия Договора, применимые при Подключении Подписки на Платформе Партнера. [sberprime-offer@2026-03-01, с. 1]\nПриложение «Д» — условия Договора, применимые при Подключении Подписки СберПрайм3 в рамках Пакета услуг. [sberprime-offer@2026-03-01, с. 1]\nПриложение «Е» — условия Договора, применимые при Подключении Подписки Совладельцами Подписки. [sberprime-offer@2026-03-01, с. 1]",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "product",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент просит не выдавать деньги и уточняет, что купюры выберет позже. Баланс — 50000 ₽. Клиент запросил перечень умений: снятие, внесение, баланс. По СберПрайм названы приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. К снятию обещано вернуться по команде «Продолжим снятие».",
+      "summary_revision": 2,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2782,
+        "preflight_after": 2782,
+        "window_messages": 14,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 1018,
+        "input_tokens": 9571,
+        "total_tokens": 10589,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [
+        {
+          "chunk_id": "sberprime-offer@2026-03-01:p0001:c00",
+          "source_id": "sberprime-offer@2026-03-01",
+          "path": "docs/offer_01.03.2026.pdf",
+          "page": 1,
+          "quote": "-  Приложение   «Е»          –   условия   Договора,   применимые   при   Подключении   Подписки        Совладельцами Подписки."
+        }
+      ],
+      "rag_tool_calls": [
+        {
+          "name": "search_knowledge",
+          "arguments": {
+            "query": "приложения договора sberprime-offer@2026-03-01",
+            "as_of": "2026-03-01",
+            "product": "",
+            "document_id": "sberprime-offer",
+            "source_id": "sberprime-offer@2026-03-01"
+          }
+        }
+      ],
+      "turn": 21,
+      "text": "По документу sberprime-offer@2026-03-01 на 1 марта 2026 года перечисли только буквы приложений договора.",
+      "budget": {
+        "turn": 21,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2782,
+          "preflight_after": 2782,
+          "window_messages": 14,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 137,
+              "input_tokens": 2426,
+              "total_tokens": 2563,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2782,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1427.8424159856513
+          },
+          {
+            "stage": "tool_selection",
+            "usage": {
+              "output_tokens": 138,
+              "input_tokens": 1819,
+              "total_tokens": 1957,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "tool_selection",
+              "counted_tokens": 1971,
+              "overhead_reserve": 256,
+              "input_budget": 12000,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1435.9521250007674
+          },
+          {
+            "stage": "grounded_answer",
+            "usage": {
+              "output_tokens": 743,
+              "input_tokens": 5326,
+              "total_tokens": 6069,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "grounded_answer",
+              "counted_tokens": 5916,
+              "overhead_reserve": 256,
+              "input_budget": 12000,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 6144.659625017084
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 1018,
+          "input_tokens": 9571,
+          "total_tokens": 10589,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3493,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "В загруженных документах на выбранную дату недостаточно информации для ответа.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "product",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент просит не выдавать деньги и уточняет, что купюры выберет позже. Баланс — 50000 ₽. Клиент запросил перечень умений: снятие, внесение, баланс. По СберПрайм названы приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. К снятию обещано вернуться по команде «Продолжим снятие».",
+      "summary_revision": 2,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 3146,
+        "preflight_after": 3146,
+        "window_messages": 16,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 221,
+        "input_tokens": 4958,
+        "total_tokens": 5179,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 22,
+      "text": "Это был вопрос об условиях продукта, деньги сейчас не выдавай.",
+      "budget": {
+        "turn": 22,
+        "context": {
+          "action": "keep",
+          "preflight_before": 3146,
+          "preflight_after": 3146,
+          "window_messages": 16,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 187,
+              "input_tokens": 2782,
+              "total_tokens": 2969,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 3146,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1640.2544589946046
+          },
+          {
+            "stage": "tool_selection",
+            "usage": {
+              "output_tokens": 34,
+              "input_tokens": 2176,
+              "total_tokens": 2210,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "tool_selection",
+              "counted_tokens": 2335,
+              "overhead_reserve": 256,
+              "input_budget": 12000,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 984.6277500037104
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 221,
+          "input_tokens": 4958,
+          "total_tokens": 5179,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3857,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Баланс: 50000 ₽.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "balance",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал купюр, и попросил время подумать; предпочтений по купюрам в памяти нет. Доступные текстовые операции: снятие, внесение, баланс. По СберПрайм приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж.",
+      "summary_revision": 3,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "summarize",
+        "preflight_before": 3188,
+        "preflight_after": 2947,
+        "window_messages": 8,
+        "folded_messages": 10,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 333,
+        "input_tokens": 3275,
+        "total_tokens": 3608,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 23,
+      "text": "Посмотрим баланс.",
+      "budget": {
+        "turn": 23,
+        "context": {
+          "action": "summarize",
+          "preflight_before": 3188,
+          "preflight_after": 2947,
+          "window_messages": 8,
+          "folded_messages": 10,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "summarize",
+            "usage": {
+              "output_tokens": 146,
+              "input_tokens": 682,
+              "total_tokens": 828,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "summarize",
+              "counted_tokens": 736,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 384,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1742.316791031044
+          },
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 187,
+              "input_tokens": 2593,
+              "total_tokens": 2780,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2947,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1729.1478750412352
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 333,
+          "input_tokens": 3275,
+          "total_tokens": 3608,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3899,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "pause",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал купюр, и попросил время подумать; предпочтений по купюрам в памяти нет. Доступные текстовые операции: снятие, внесение, баланс. По СберПрайм приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж.",
+      "summary_revision": 3,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2997,
+        "preflight_after": 2997,
+        "window_messages": 10,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 137,
+        "input_tokens": 2641,
+        "total_tokens": 2778,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 24,
+      "text": "Я ещё выбираю, к выдаче вернусь немного позже.",
+      "budget": {
+        "turn": 24,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2997,
+          "preflight_after": 2997,
+          "window_messages": 10,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 137,
+              "input_tokens": 2641,
+              "total_tokens": 2778,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2997,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1382.110707985703
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 137,
+          "input_tokens": 2641,
+          "total_tokens": 2778,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 3949,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Могу помочь со снятием, внесением наличных и балансом.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "other",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал купюр, и попросил время подумать; предпочтений по купюрам в памяти нет. Доступные текстовые операции: снятие, внесение, баланс. По СберПрайм приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж.",
+      "summary_revision": 3,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 3056,
+        "preflight_after": 3056,
+        "window_messages": 12,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 137,
+        "input_tokens": 2698,
+        "total_tokens": 2835,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 25,
+      "text": "Для предпочтения важно слово «запомни», а разовый выбор можно менять?",
+      "budget": {
+        "turn": 25,
+        "context": {
+          "action": "keep",
+          "preflight_before": 3056,
+          "preflight_after": 3056,
+          "window_messages": 12,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 137,
+              "input_tokens": 2698,
+              "total_tokens": 2835,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 3056,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1736.496834026184
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 137,
+          "input_tokens": 2698,
+          "total_tokens": 2835,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4008,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Могу помочь со снятием, внесением наличных и балансом.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "other",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал купюр, и попросил время подумать; предпочтений по купюрам в памяти нет. Доступные текстовые операции: снятие, внесение, баланс. По СберПрайм приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж.",
+      "summary_revision": 3,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 3109,
+        "preflight_after": 3109,
+        "window_messages": 14,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 57,
+        "input_tokens": 2748,
+        "total_tokens": 2805,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 26,
+      "text": "Напомни, с какими операциями ты помогаешь.",
+      "budget": {
+        "turn": 26,
+        "context": {
+          "action": "keep",
+          "preflight_before": 3109,
+          "preflight_after": 3109,
+          "window_messages": 14,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 57,
+              "input_tokens": 2748,
+              "total_tokens": 2805,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 3109,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1127.3423329694197
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 57,
+          "input_tokens": 2748,
+          "total_tokens": 2805,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4061,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Вы сохраняли предпочтение: купюры по 1000 ₽. Использовать его для этого снятия?",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "details",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал купюр, и попросил время подумать; предпочтений по купюрам в памяти нет. Доступные текстовые операции: снятие, внесение, баланс. По СберПрайм приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж.",
+      "summary_revision": 3,
+      "summary_citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 3161,
+        "preflight_after": 3161,
+        "window_messages": 16,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 147,
+        "input_tokens": 2798,
+        "total_tokens": 2945,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 27,
+      "text": "Сумму снятия я уже назвала, менять её не хочу.",
+      "budget": {
+        "turn": 27,
+        "context": {
+          "action": "keep",
+          "preflight_before": 3161,
+          "preflight_after": 3161,
+          "window_messages": 16,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 147,
+              "input_tokens": 2798,
+              "total_tokens": 2945,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 3161,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1331.160000001546
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 147,
+          "input_tokens": 2798,
+          "total_tokens": 2945,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4113,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": null,
+      "extracted": {
+        "relevance": "background",
+        "intent": "other"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал, и попросил время подумать; в этот раз купюры не подтвердил, но сообщил: «обычно выдавай купюрами по 1000 рублей» — сохранено как предпочтение на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс. Деньги не выдавать.",
+      "summary_revision": 4,
+      "summary_citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "summarize",
+        "preflight_before": 3331,
+        "preflight_after": 2748,
+        "window_messages": 8,
+        "folded_messages": 10,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 231,
+        "input_tokens": 3445,
+        "total_tokens": 3676,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 28,
+      "text": "Коля, да, купи кофе. Я разговариваю с тобой, не с банкоматом.",
+      "budget": {
+        "turn": 28,
+        "context": {
+          "action": "summarize",
+          "preflight_before": 3331,
+          "preflight_after": 2748,
+          "window_messages": 8,
+          "folded_messages": 10,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "summarize",
+            "usage": {
+              "output_tokens": 175,
+              "input_tokens": 1049,
+              "total_tokens": 1224,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "summarize",
+              "counted_tokens": 1107,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 384,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1397.1338749979623
+          },
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 56,
+              "input_tokens": 2396,
+              "total_tokens": 2452,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2748,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 893.7024170299992
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 231,
+          "input_tokens": 3445,
+          "total_tokens": 3676,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4283,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "pause",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал, и попросил время подумать; в этот раз купюры не подтвердил, но сообщил: «обычно выдавай купюрами по 1000 рублей» — сохранено как предпочтение на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс. Деньги не выдавать.",
+      "summary_revision": 4,
+      "summary_citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2736,
+        "preflight_after": 2736,
+        "window_messages": 8,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 151,
+        "input_tokens": 2384,
+        "total_tokens": 2535,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 29,
+      "text": "Наличность пока не выдавай.",
+      "budget": {
+        "turn": 29,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2736,
+          "preflight_after": 2736,
+          "window_messages": 8,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 151,
+              "input_tokens": 2384,
+              "total_tokens": 2535,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2736,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1277.7573749772273
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 151,
+          "input_tokens": 2384,
+          "total_tokens": 2535,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4271,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Баланс: 50000 ₽.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "balance",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал, и попросил время подумать; в этот раз купюры не подтвердил, но сообщил: «обычно выдавай купюрами по 1000 рублей» — сохранено как предпочтение на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс. Деньги не выдавать.",
+      "summary_revision": 4,
+      "summary_citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2784,
+        "preflight_after": 2784,
+        "window_messages": 10,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 187,
+        "input_tokens": 2430,
+        "total_tokens": 2617,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 30,
+      "text": "Покажи текущий баланс.",
+      "budget": {
+        "turn": 30,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2784,
+          "preflight_after": 2784,
+          "window_messages": 10,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 187,
+              "input_tokens": 2430,
+              "total_tokens": 2617,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2784,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1414.4588750205003
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 187,
+          "input_tokens": 2430,
+          "total_tokens": 2617,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4319,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "pause",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал, и попросил время подумать; в этот раз купюры не подтвердил, но сообщил: «обычно выдавай купюрами по 1000 рублей» — сохранено как предпочтение на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс. Деньги не выдавать.",
+      "summary_revision": 4,
+      "summary_citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2833,
+        "preflight_after": 2833,
+        "window_messages": 12,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 187,
+        "input_tokens": 2477,
+        "total_tokens": 2664,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 31,
+      "text": "Операцию снятия продолжаем позже, я ещё думаю.",
+      "budget": {
+        "turn": 31,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2833,
+          "preflight_after": 2833,
+          "window_messages": 12,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 187,
+              "input_tokens": 2477,
+              "total_tokens": 2664,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2833,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1781.6032500122674
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 187,
+          "input_tokens": 2477,
+          "total_tokens": 2664,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4368,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Вы сохраняли предпочтение: купюры по 1000 ₽. Использовать его для этого снятия?",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "resume",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000
+      },
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал, и попросил время подумать; в этот раз купюры не подтвердил, но сообщил: «обычно выдавай купюрами по 1000 рублей» — сохранено как предпочтение на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс. Деньги не выдавать.",
+      "summary_revision": 4,
+      "summary_citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2892,
+        "preflight_after": 2892,
+        "window_messages": 14,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 144,
+        "input_tokens": 2534,
+        "total_tokens": 2678,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 32,
+      "text": "Вернёмся к деньгам на дорогу. Продолжим начатое снятие.",
+      "budget": {
+        "turn": 32,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2892,
+          "preflight_after": 2892,
+          "window_messages": 14,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 144,
+              "input_tokens": 2534,
+              "total_tokens": 2678,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2892,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1547.3010409623384
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 144,
+          "input_tokens": 2534,
+          "total_tokens": 2678,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4427,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Выдать 7000 ₽, купюрами по 1000 ₽?",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "details",
+        "amount": null,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": [],
+        "cash_choice": true
+      },
+      "pending": {
+        "request_id": "20b1e33a4045423085c4c9043c95cfcc",
+        "action": "withdraw",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": []
+      },
+      "confirmation_active": true,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал, и попросил время подумать; в этот раз купюры не подтвердил, но сообщил: «обычно выдавай купюрами по 1000 рублей» — сохранено как предпочтение на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс. Деньги не выдавать.",
+      "summary_revision": 4,
+      "summary_citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2948,
+        "preflight_after": 2948,
+        "window_messages": 16,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 135,
+        "input_tokens": 2587,
+        "total_tokens": 2722,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 33,
+      "text": "Для этого снятия — тысячными.",
+      "budget": {
+        "turn": 33,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2948,
+          "preflight_after": 2948,
+          "window_messages": 16,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 135,
+              "input_tokens": 2587,
+              "total_tokens": 2722,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2948,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1428.224625007715
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 135,
+          "input_tokens": 2587,
+          "total_tokens": 2722,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4483,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": null,
+      "extracted": {
+        "relevance": "background",
+        "intent": "other"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": [],
+        "cash_choice": true
+      },
+      "pending": {
+        "request_id": "20b1e33a4045423085c4c9043c95cfcc",
+        "action": "withdraw",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": []
+      },
+      "confirmation_active": true,
+      "summary": "Снятие 7000 ₽ и выбор купюр не завершены; клиент взял паузу и попросил не выдавать наличность. Баланс — 50000 ₽. Клиент уточнил, что сумма не меняется, и спросил о разнице между разовым выбором и предпочтением; подтвердил, что к выдаче вернётся по команде «Продолжим снятие». Сохранено предпочтение «купюрами по 1000 ₽» на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс.",
+      "summary_revision": 5,
+      "summary_citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "summarize",
+        "preflight_before": 3002,
+        "preflight_after": 2721,
+        "window_messages": 8,
+        "folded_messages": 10,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 310,
+        "input_tokens": 3117,
+        "total_tokens": 3427,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 34,
+      "text": "Сосед, да, я уже заканчиваю. Это ответ тебе, а не банкомату.",
+      "budget": {
+        "turn": 34,
+        "context": {
+          "action": "summarize",
+          "preflight_before": 3002,
+          "preflight_after": 2721,
+          "window_messages": 8,
+          "folded_messages": 10,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "summarize",
+            "usage": {
+              "output_tokens": 171,
+              "input_tokens": 747,
+              "total_tokens": 918,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "summarize",
+              "counted_tokens": 800,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 384,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 2059.332375007216
+          },
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 139,
+              "input_tokens": 2370,
+              "total_tokens": 2509,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2721,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1347.9872499592602
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 310,
+          "input_tokens": 3117,
+          "total_tokens": 3427,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4537,
+      "withdrawal_commands": 0
+    },
+    {
+      "response": "Банкомат сообщил о выдаче 7000 ₽.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "confirm",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {},
+      "pending": null,
+      "confirmation_active": false,
+      "summary": "Снятие 7000 ₽ и выбор купюр не завершены; клиент взял паузу и попросил не выдавать наличность. Баланс — 50000 ₽. Клиент уточнил, что сумма не меняется, и спросил о разнице между разовым выбором и предпочтением; подтвердил, что к выдаче вернётся по команде «Продолжим снятие». Сохранено предпочтение «купюрами по 1000 ₽» на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс.",
+      "summary_revision": 5,
+      "summary_citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ],
+      "context_stats": {
+        "action": "keep",
+        "preflight_before": 2708,
+        "preflight_after": 2708,
+        "window_messages": 8,
+        "folded_messages": 0,
+        "input_budget": 4096
+      },
+      "turn_usage": {
+        "output_tokens": 209,
+        "input_tokens": 2357,
+        "total_tokens": 2566,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "citations": [],
+      "rag_tool_calls": [],
+      "turn": 35,
+      "text": "Да, подтверждаю выдачу.",
+      "budget": {
+        "turn": 35,
+        "context": {
+          "action": "keep",
+          "preflight_before": 2708,
+          "preflight_after": 2708,
+          "window_messages": 8,
+          "folded_messages": 0,
+          "input_budget": 4096
+        },
+        "calls": [
+          {
+            "stage": "extract",
+            "usage": {
+              "output_tokens": 209,
+              "input_tokens": 2357,
+              "total_tokens": 2566,
+              "input_token_details": {
+                "cache_read": 0
+              }
+            },
+            "preflight": {
+              "stage": "extract",
+              "counted_tokens": 2708,
+              "overhead_reserve": 256,
+              "input_budget": 4096,
+              "max_output_tokens": 1024,
+              "counter": "gigachat_tokens_count"
+            },
+            "within_budget": true,
+            "latency_ms": 1695.1611670083366
+          }
+        ],
+        "actual_usage": {
+          "output_tokens": 209,
+          "input_tokens": 2357,
+          "total_tokens": 2566,
+          "input_token_details": {
+            "cache_read": 0
+          }
+        }
+      },
+      "uncompacted_preflight_tokens": 4524,
+      "withdrawal_commands": 1
+    }
+  ],
+  "summary_versions": [
+    {
+      "turn": 11,
+      "revision": 1,
+      "summary": "Клиент поздоровался, запросил снятие 7000 ₽ на дорогу, затем попросил показать баланс — 50000 ₽. Купюрность не выбрана, предпочтение не зафиксировано. Далее уточнил состав СберПрайм на 01.03.2026; перечислены буквы А, Б, В, Г, Д, Е. Разговор о снятии и о дороге не завершён, к задаче обещано вернуться.",
+      "citations": [
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ]
+    },
+    {
+      "turn": 17,
+      "revision": 2,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент просит не выдавать деньги и уточняет, что купюры выберет позже. Баланс — 50000 ₽. Клиент запросил перечень умений: снятие, внесение, баланс. По СберПрайм названы приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. К снятию обещано вернуться по команде «Продолжим снятие».",
+      "citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ]
+    },
+    {
+      "turn": 23,
+      "revision": 3,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал купюр, и попросил время подумать; предпочтений по купюрам в памяти нет. Доступные текстовые операции: снятие, внесение, баланс. По СберПрайм приложения: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж.",
+      "citations": [
+        "[sberprime-offer@2026-03-01, с. 1]",
+        "[sberprime-offer@2026-09-30, с. 1]"
+      ]
+    },
+    {
+      "turn": 28,
+      "revision": 4,
+      "summary": "Снятие 7000 ₽ на дорогу и выбор купюр не завершены; клиент попросил паузу и сказал вернуться по команде «Продолжим снятие». Баланс — 50000 ₽. Клиент уточнил, может ли сам указать номинал, и попросил время подумать; в этот раз купюры не подтвердил, но сообщил: «обычно выдавай купюрами по 1000 рублей» — сохранено как предпочтение на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс. Деньги не выдавать.",
+      "citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ]
+    },
+    {
+      "turn": 34,
+      "revision": 5,
+      "summary": "Снятие 7000 ₽ и выбор купюр не завершены; клиент взял паузу и попросил не выдавать наличность. Баланс — 50000 ₽. Клиент уточнил, что сумма не меняется, и спросил о разнице между разовым выбором и предпочтением; подтвердил, что к выдаче вернётся по команде «Продолжим снятие». Сохранено предпочтение «купюрами по 1000 ₽» на 180 дней. По СберПрайм: на 01.03.2026 — А, Б, В, Г, Д, Е; на 30.09.2026 — А, Б, В, Г, Д, Е, Ж. Доступные операции: снятие, внесение, баланс.",
+      "citations": [
+        "[sberprime-offer@2026-09-30, с. 1]",
+        "[sberprime-offer@2026-03-01, с. 1]"
+      ]
+    }
+  ],
+  "model": "GigaChat-3-Ultra",
+  "dialogue_input_budget": 4096,
+  "rag_input_budget": 12000,
+  "commands": [
+    {
+      "request_id": "a049348ad6e64182ae9a9d9add69d001",
+      "action": "get_balance",
+      "amount": null,
+      "denomination": null,
+      "notes": []
+    },
+    {
+      "request_id": "52d62c448602425baf59c30f47428894",
+      "action": "get_balance",
+      "amount": null,
+      "denomination": null,
+      "notes": []
+    },
+    {
+      "request_id": "5e1bd394f41747288c8f98c801241c36",
+      "action": "get_balance",
+      "amount": null,
+      "denomination": null,
+      "notes": []
+    },
+    {
+      "request_id": "3b0691ab8bd54b8b86ff72406a1b5171",
+      "action": "get_balance",
+      "amount": null,
+      "denomination": null,
+      "notes": []
+    },
+    {
+      "request_id": "44b1d87f07a64aadabf891fb19ad22cf",
+      "action": "get_balance",
+      "amount": null,
+      "denomination": null,
+      "notes": []
+    },
+    {
+      "request_id": "20b1e33a4045423085c4c9043c95cfcc",
+      "action": "withdraw",
+      "amount": 7000,
+      "denomination": 1000,
+      "notes": []
+    }
+  ],
+  "session_usage": {
+    "output_tokens": 8421,
+    "input_tokens": 112450,
+    "total_tokens": 120871,
+    "input_token_details": {
+      "cache_read": 0
+    }
+  },
+  "folded_messages": 50,
+  "max_dialogue_actual_input": 2798,
+  "max_rag_actual_input": 6177
+}

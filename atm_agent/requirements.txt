@@ -1,0 +1,13 @@
+langchain-gigachat==0.5.1
+langgraph==1.2.16
+pydantic==2.13.5
+python-dotenv==1.2.3
+typing-extensions==4.16.0
+httpx==0.28.1
+pypdf==6.21.3
+bm25s==0.3.15
+pymorphy3==2.0.6
+qdrant-client==1.20.0
+numpy==2.2.6
+sentence-transformers==6.2.0
+requests==2.34.2

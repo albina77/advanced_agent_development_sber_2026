@@ -1,0 +1,24 @@
+/*
+!/.gitignore
+!/README.md
+!/atm_agent/
+!/docs/
+!/Screen Recording 2026-10-31 at 20.58.57.mov
+
+.venv/
+**/__pycache__/
+*.py[cod]
+.env
+.env.*
+.env_*
+!.env.example
+*.sqlite3*
+*.db
+*.log
+*.xlsx
+.DS_Store
+atm_agent/data/rag/models/
+atm_agent/data/rag/embedding_cache.sqlite3*
+atm_agent/data/rag/vectors.npy
+atm_agent/data/rag/runs/
+atm_agent/data/memory/

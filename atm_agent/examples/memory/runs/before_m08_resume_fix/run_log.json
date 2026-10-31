@@ -1,0 +1,3993 @@
+{
+  "started_at": "2026-10-31T16:08:56.774785+00:00",
+  "model": "GigaChat-3-Ultra",
+  "synthetic": true,
+  "dataset_sha256": "62530ae295e111fba16189ae3f90fbbefebd2fd742aab645ab56f579146d6ab7",
+  "status": "finished",
+  "cases": [
+    {
+      "id": "M01",
+      "title": "Прошлый выбор переживает новую сессию",
+      "setup": "Пустая временная база. Между сессиями сохранить Store, создать новый thread_id.",
+      "status": "failed",
+      "turns": [
+        {
+          "session": 1,
+          "turn": 1,
+          "client_id": "synthetic_client_a",
+          "text": "Выдай мне шесть тысяч, все купюры по тысяче.",
+          "expected": "Подготовить выдачу 6000/1000 и запросить подтверждение; команд пока нет.",
+          "assertions": {
+            "commands": [],
+            "pending": {
+              "amount": 6000,
+              "denomination": 1000
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:08:56.775114+00:00",
+          "commands": [],
+          "failures": [
+            "pending: ожидалось {'amount': 6000, 'denomination': 1000}, получено None",
+            "confirmation_active: ожидалось True, получено False"
+          ],
+          "response": "Какими купюрами выдать? Можно на выбор банкомата. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 6000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 6000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 160,
+            "input_tokens": 1924,
+            "total_tokens": 2084,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 2,
+          "client_id": "synthetic_client_a",
+          "text": "Подтверждаю эту выдачу.",
+          "expected": "Одна команда withdraw 6000/1000. После успешного ответа устройства сохранить эпизод.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "withdraw",
+                "amount": 6000,
+                "denomination": 1000
+              }
+            ]
+          },
+          "clock": "2026-10-31T16:08:56.775114+00:00",
+          "commands": [],
+          "failures": [
+            "Ожидалось команд: 1, получено: 0"
+          ],
+          "response": "Сначала укажите, какую операцию хотите выполнить.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 6000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 201,
+            "input_tokens": 2001,
+            "total_tokens": 2202,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 1,
+          "client_id": "synthetic_client_a",
+          "text": "Нужны наличные, в этот раз восемь тысяч.",
+          "expected": "Предложить номинал 1000 из прошлого эпизода. Новая сумма 8000; команды нет.",
+          "assertions": {
+            "commands": [],
+            "cash_offer": {
+              "denomination": 1000
+            },
+            "slots": {
+              "amount": 8000
+            }
+          },
+          "clock": "2026-10-31T16:08:56.775114+00:00",
+          "commands": [],
+          "failures": [
+            "cash_offer: ожидалось {'denomination': 1000}, получено None"
+          ],
+          "response": "Какими купюрами выдать? Можно на выбор банкомата. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 8000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 8000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 151,
+            "input_tokens": 1923,
+            "total_tokens": 2074,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 2,
+          "client_id": "synthetic_client_a",
+          "text": "Такой номинал мне подходит.",
+          "expected": "Принять выбор купюр и отдельно запросить подтверждение выдачи; команды нет.",
+          "assertions": {
+            "commands": [],
+            "pending": {
+              "amount": 8000,
+              "denomination": 1000
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:08:56.775114+00:00",
+          "commands": [],
+          "failures": [
+            "pending: ожидалось {'amount': 8000, 'denomination': 1000}, получено None",
+            "confirmation_active: ожидалось True, получено False"
+          ],
+          "response": "Сначала укажите, какую операцию хотите выполнить.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 8000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 118,
+            "input_tokens": 1998,
+            "total_tokens": 2116,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 3,
+          "client_id": "synthetic_client_a",
+          "text": "Разрешаю выдать указанную сумму.",
+          "expected": "Одна новая команда withdraw 8000/1000.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "withdraw",
+                "amount": 8000,
+                "denomination": 1000
+              }
+            ]
+          },
+          "clock": "2026-10-31T16:08:56.775114+00:00",
+          "commands": [],
+          "failures": [
+            "Ожидалось команд: 1, получено: 0"
+          ],
+          "response": "Сначала укажите, какую операцию хотите выполнить.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 8000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 150,
+            "input_tokens": 247,
+            "total_tokens": 397,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        }
+      ],
+      "workers": []
+    },
+    {
+      "id": "M02",
+      "title": "Явное предпочтение важнее разового выбора",
+      "setup": "Пустая временная база. Между сессиями сохранить Store, создать новый thread_id.",
+      "status": "failed",
+      "turns": [
+        {
+          "session": 1,
+          "turn": 1,
+          "client_id": "synthetic_client_b",
+          "text": "Для следующих снятий запомни мой выбор: пятисотенные купюры.",
+          "expected": "Сохранить предпочтение 500 без суммы; команд нет.",
+          "assertions": {
+            "commands": [],
+            "preference": 500
+          },
+          "clock": "2026-10-31T16:09:06.815093+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Сохранено предпочтение на 180 дней: купюры по 500 ₽. При снятии уточню ваш выбор.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "preference",
+            "amount": null,
+            "denomination": 500,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": null,
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 0
+            },
+            "input_tokens": 2338,
+            "output_tokens": 179,
+            "total_tokens": 2517
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 2,
+          "client_id": "synthetic_client_b",
+          "text": "Сейчас выдай четыре тысячи, но только тысячными.",
+          "expected": "Запросить подтверждение 4000/1000; профиль остаётся 500.",
+          "assertions": {
+            "commands": [],
+            "pending": {
+              "amount": 4000,
+              "denomination": 1000
+            },
+            "confirmation_active": true,
+            "preference": 500
+          },
+          "clock": "2026-10-31T16:09:06.815093+00:00",
+          "commands": [],
+          "failures": [
+            "pending: ожидалось {'amount': 4000, 'denomination': 1000}, получено None",
+            "confirmation_active: ожидалось True, получено False"
+          ],
+          "response": "Вы сохраняли предпочтение: купюры по 500 ₽. Использовать его для этого снятия?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 4000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 4000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 500,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:09:06.815093+00:00",
+            "expires_at": "2027-04-29T16:09:06.815093+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 152,
+            "input_tokens": 1990,
+            "total_tokens": 2142,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 3,
+          "client_id": "synthetic_client_b",
+          "text": "Эту операцию подтверждаю.",
+          "expected": "Отправить withdraw 4000/1000; сохранить эпизод, не заменять предпочтение.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "withdraw",
+                "amount": 4000,
+                "denomination": 1000
+              }
+            ],
+            "preference": 500
+          },
+          "clock": "2026-10-31T16:09:06.815093+00:00",
+          "commands": [],
+          "failures": [
+            "Ожидалось команд: 1, получено: 0"
+          ],
+          "response": "Выдать 4000 ₽, купюрами по 500 ₽?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 4000,
+            "denomination": 500,
+            "notes": [],
+            "cash_choice": true
+          },
+          "pending": {
+            "request_id": "c661306f4ee24f1eb604eae484ee72b8",
+            "action": "withdraw",
+            "amount": 4000,
+            "denomination": 500,
+            "notes": []
+          },
+          "cash_offer": null,
+          "confirmation_active": true,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 189,
+            "input_tokens": 298,
+            "total_tokens": 487,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 1,
+          "client_id": "synthetic_client_b",
+          "text": "Хочу получить семь тысяч наличными.",
+          "expected": "Предложить 500 из явного предпочтения, несмотря на последний эпизод 1000.",
+          "assertions": {
+            "commands": [],
+            "cash_offer": {
+              "denomination": 500
+            },
+            "slots": {
+              "amount": 7000
+            }
+          },
+          "clock": "2026-10-31T16:09:06.815093+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Вы сохраняли предпочтение: купюры по 500 ₽. Использовать его для этого снятия? Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 7000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 7000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 500,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:09:06.815093+00:00",
+            "expires_at": "2027-04-29T16:09:06.815093+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 95,
+            "input_tokens": 126,
+            "total_tokens": 221,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 2,
+          "client_id": "synthetic_client_b",
+          "text": "Оставим предложенные купюры.",
+          "expected": "Отдельно запросить подтверждение 7000/500; команды нет.",
+          "assertions": {
+            "commands": [],
+            "pending": {
+              "amount": 7000,
+              "denomination": 500
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:09:06.815093+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Выдать 7000 ₽, купюрами по 500 ₽?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 7000,
+            "denomination": 500,
+            "notes": [],
+            "cash_choice": true
+          },
+          "pending": {
+            "request_id": "b0706d6d0f9645b684dbebfd4a1eb1e1",
+            "action": "withdraw",
+            "amount": 7000,
+            "denomination": 500,
+            "notes": []
+          },
+          "cash_offer": null,
+          "confirmation_active": true,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 172,
+            "input_tokens": 2100,
+            "total_tokens": 2272,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 3,
+          "client_id": "synthetic_client_b",
+          "text": "Согласна на выдачу семи тысяч.",
+          "expected": "Отправить withdraw 7000/500.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "withdraw",
+                "amount": 7000,
+                "denomination": 500
+              }
+            ]
+          },
+          "clock": "2026-10-31T16:09:06.815093+00:00",
+          "commands": [
+            {
+              "request_id": "b0706d6d0f9645b684dbebfd4a1eb1e1",
+              "action": "withdraw",
+              "amount": 7000,
+              "denomination": 500,
+              "notes": []
+            }
+          ],
+          "failures": [],
+          "response": "Банкомат сообщил о выдаче 7000 ₽.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": 7000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {},
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 150,
+            "input_tokens": 2138,
+            "total_tokens": 2288,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        }
+      ],
+      "workers": []
+    },
+    {
+      "id": "M03",
+      "title": "Новое предпочтение заменяет старое",
+      "setup": "Пустая временная база. Между сессиями сохранить Store, создать новый thread_id.",
+      "status": "passed",
+      "turns": [
+        {
+          "session": 1,
+          "turn": 1,
+          "client_id": "synthetic_client_c",
+          "text": "Сохрани для будущих выдач: мне удобны купюры по сто рублей.",
+          "expected": "Записать явное предпочтение 100.",
+          "assertions": {
+            "commands": [],
+            "preference": 100
+          },
+          "clock": "2026-10-31T16:09:19.297509+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Сохранено предпочтение на 180 дней: купюры по 100 ₽. При снятии уточню ваш выбор.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "preference",
+            "amount": null,
+            "denomination": 100,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": null,
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 0
+            },
+            "input_tokens": 2340,
+            "output_tokens": 272,
+            "total_tokens": 2612
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 2,
+          "client_id": "synthetic_client_c",
+          "text": "Меняю постоянный выбор: впредь выдавай тысячными, запомни это.",
+          "expected": "Заменить предпочтение на 1000; не отправлять команду.",
+          "assertions": {
+            "commands": [],
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:09:19.297509+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Сохранено предпочтение на 180 дней: купюры по 1000 ₽. При снятии уточню ваш выбор.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "preference",
+            "amount": null,
+            "denomination": 1000,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": null,
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 1855
+            },
+            "input_tokens": 554,
+            "output_tokens": 177,
+            "total_tokens": 731
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 1,
+          "client_id": "synthetic_client_c",
+          "text": "Выдай девять тысяч наличными.",
+          "expected": "Предложить 1000, а не прежние 100.",
+          "assertions": {
+            "commands": [],
+            "cash_offer": {
+              "denomination": 1000
+            }
+          },
+          "clock": "2026-10-31T16:09:19.297509+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Вы сохраняли предпочтение: купюры по 1000 ₽. Использовать его для этого снятия? Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 9000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 9000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:09:19.297509+00:00",
+            "expires_at": "2027-04-29T16:09:19.297509+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 149,
+            "input_tokens": 1917,
+            "total_tokens": 2066,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 2,
+          "client_id": "synthetic_client_c",
+          "text": "Купюры устраивают.",
+          "expected": "Спросить отдельное подтверждение выдачи.",
+          "assertions": {
+            "commands": [],
+            "pending": {
+              "amount": 9000,
+              "denomination": 1000
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:09:19.297509+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Выдать 9000 ₽, купюрами по 1000 ₽?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 9000,
+            "denomination": 1000,
+            "notes": [],
+            "cash_choice": true
+          },
+          "pending": {
+            "request_id": "17a16240bd0348eea5242b55fa6e5b38",
+            "action": "withdraw",
+            "amount": 9000,
+            "denomination": 1000,
+            "notes": []
+          },
+          "cash_offer": null,
+          "confirmation_active": true,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 151,
+            "input_tokens": 2100,
+            "total_tokens": 2251,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 3,
+          "client_id": "synthetic_client_c",
+          "text": "Подтверждаю получение девяти тысяч.",
+          "expected": "Отправить withdraw 9000/1000.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "withdraw",
+                "amount": 9000,
+                "denomination": 1000
+              }
+            ]
+          },
+          "clock": "2026-10-31T16:09:19.297509+00:00",
+          "commands": [
+            {
+              "request_id": "17a16240bd0348eea5242b55fa6e5b38",
+              "action": "withdraw",
+              "amount": 9000,
+              "denomination": 1000,
+              "notes": []
+            }
+          ],
+          "failures": [],
+          "response": "Банкомат сообщил о выдаче 9000 ₽.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": 9000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {},
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 150,
+            "input_tokens": 2139,
+            "total_tokens": 2289,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        }
+      ],
+      "workers": []
+    },
+    {
+      "id": "M04",
+      "title": "Изоляция клиентов при имитации карты",
+      "setup": "Пустая временная база. Между сессиями сохранить Store, создать новый thread_id.",
+      "status": "passed",
+      "turns": [
+        {
+          "session": 1,
+          "turn": 1,
+          "client_id": "synthetic_client_d",
+          "text": "На будущее сохрани: пусть банкомат сам выбирает мне купюры.",
+          "expected": "Сохранить atm_choice только для клиента D.",
+          "assertions": {
+            "commands": [],
+            "preference": "atm"
+          },
+          "clock": "2026-10-31T16:09:31.898759+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Сохранено предпочтение на 180 дней: выбор купюр банкоматом. При снятии уточню ваш выбор.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "preference",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": true,
+            "preference_action": "set"
+          },
+          "slots": null,
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 383
+            },
+            "input_tokens": 1949,
+            "output_tokens": 157,
+            "total_tokens": 2106
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 1,
+          "client_id": "synthetic_client_e",
+          "text": "Выдай мне пять тысяч наличными.",
+          "expected": "Спросить купюры без предложения предпочтения клиента D.",
+          "assertions": {
+            "commands": [],
+            "cash_offer": null,
+            "slots": {
+              "amount": 5000
+            }
+          },
+          "clock": "2026-10-31T16:09:31.898759+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Какими купюрами выдать? Можно на выбор банкомата. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 5000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 5000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 149,
+            "input_tokens": 127,
+            "total_tokens": 276,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 2,
+          "client_id": "synthetic_client_e",
+          "text": "Купюры выбери самостоятельно.",
+          "expected": "Запросить подтверждение 5000, выбор банкомата.",
+          "assertions": {
+            "commands": [],
+            "pending": {
+              "amount": 5000,
+              "denomination": null
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:09:31.898759+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Выдать 5000 ₽, купюрами на выбор банкомата?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": true,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 5000,
+            "denomination": null,
+            "notes": [],
+            "cash_choice": true
+          },
+          "pending": {
+            "request_id": "c1f204d4ed96450d99a701f25f440106",
+            "action": "withdraw",
+            "amount": 5000,
+            "denomination": null,
+            "notes": []
+          },
+          "cash_offer": null,
+          "confirmation_active": true,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 115,
+            "input_tokens": 1993,
+            "total_tokens": 2108,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 3,
+          "client_id": "synthetic_client_e",
+          "text": "Пока отменяю выдачу.",
+          "expected": "Очистить операцию; команд нет.",
+          "assertions": {
+            "commands": [],
+            "slots": {},
+            "pending": null
+          },
+          "clock": "2026-10-31T16:09:31.898759+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Операция отменена.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "cancel",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {},
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 149,
+            "input_tokens": 2119,
+            "total_tokens": 2268,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 3,
+          "turn": 1,
+          "client_id": "synthetic_client_d",
+          "text": "Мне нужны две тысячи наличными.",
+          "expected": "Предложить сохранённый выбор купюр банкоматом; команд нет.",
+          "assertions": {
+            "commands": [],
+            "cash_offer": {
+              "atm_choice": true
+            },
+            "slots": {
+              "amount": 2000
+            }
+          },
+          "clock": "2026-10-31T16:09:31.898759+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Вы сохраняли предпочтение: выбор купюр банкоматом. Использовать его для этого снятия? Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 2000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 2000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": null,
+            "atm_choice": true,
+            "created_at": "2026-10-31T16:09:31.898759+00:00",
+            "expires_at": "2027-04-29T16:09:31.898759+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 95,
+            "input_tokens": 1917,
+            "total_tokens": 2012,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        }
+      ],
+      "workers": []
+    },
+    {
+      "id": "M05",
+      "title": "Забывание и повторное обращение",
+      "setup": "Пустая временная база. Между сессиями сохранить Store, создать новый thread_id.",
+      "status": "failed",
+      "turns": [
+        {
+          "session": 1,
+          "turn": 1,
+          "client_id": "synthetic_client_f",
+          "text": "Запомни для будущих операций купюры по тысяче рублей.",
+          "expected": "Сохранить профиль 1000.",
+          "assertions": {
+            "commands": [],
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:09:40.559847+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Сохранено предпочтение на 180 дней: купюры по 1000 ₽. При снятии уточню ваш выбор.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "preference",
+            "amount": null,
+            "denomination": 1000,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": null,
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 0
+            },
+            "input_tokens": 2332,
+            "output_tokens": 273,
+            "total_tokens": 2605
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 2,
+          "client_id": "synthetic_client_f",
+          "text": "Выдай три тысячи тысячными.",
+          "expected": "Запросить подтверждение 3000/1000.",
+          "assertions": {
+            "commands": [],
+            "pending": {
+              "amount": 3000,
+              "denomination": 1000
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:09:40.559847+00:00",
+          "commands": [],
+          "failures": [
+            "pending: ожидалось {'amount': 3000, 'denomination': 1000}, получено None",
+            "confirmation_active: ожидалось True, получено False"
+          ],
+          "response": "Вы сохраняли предпочтение: купюры по 1000 ₽. Использовать его для этого снятия?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 3000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 3000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:09:40.559847+00:00",
+            "expires_at": "2027-04-29T16:09:40.559847+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 153,
+            "input_tokens": 1984,
+            "total_tokens": 2137,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 3,
+          "client_id": "synthetic_client_f",
+          "text": "Подтверждаю снятие трёх тысяч.",
+          "expected": "Одна успешная выдача и эпизод.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "withdraw",
+                "amount": 3000,
+                "denomination": 1000
+              }
+            ]
+          },
+          "clock": "2026-10-31T16:09:40.559847+00:00",
+          "commands": [],
+          "failures": [
+            "Ожидалось команд: 1, получено: 0"
+          ],
+          "response": "Выдать 3000 ₽, купюрами по 1000 ₽?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": 3000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 3000,
+            "denomination": 1000,
+            "notes": [],
+            "cash_choice": true
+          },
+          "pending": {
+            "request_id": "b79fe5b8af0c4c5eaa129e0cb7384fed",
+            "action": "withdraw",
+            "amount": 3000,
+            "denomination": 1000,
+            "notes": []
+          },
+          "cash_offer": null,
+          "confirmation_active": true,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 150,
+            "input_tokens": 360,
+            "total_tokens": 510,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 4,
+          "client_id": "synthetic_client_f",
+          "text": "Удали всё, что сохранил обо мне, включая предпочтения и историю.",
+          "expected": "Удалить профиль, эпизоды, векторы, задания и историю сессий. Сохранить только служебный минимум согласно учебной политике.",
+          "assertions": {
+            "commands": [],
+            "erased": true
+          },
+          "clock": "2026-10-31T16:09:40.559847+00:00",
+          "commands": [],
+          "failures": [
+            "Удалены не обе пользовательские записи",
+            "Не сохранена минимальная квитанция"
+          ],
+          "response": "Предпочтения, эпизоды, поисковые векторы и история сессий удалены. Минимальные служебные квитанции и аудит сохраняются до окончания учебного срока хранения (365 дней с даты записи).",
+          "extracted": null,
+          "slots": null,
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": null,
+          "memory_matches": null,
+          "deletion_report": {
+            "deleted_records": 1,
+            "retained_receipts": 0,
+            "retention_days": 365,
+            "artifacts_removed": 0
+          },
+          "summary_revision": null,
+          "summary": null,
+          "citations": null,
+          "rag_supported": null,
+          "turn_usage": {
+            "output_tokens": 188,
+            "input_tokens": 2194,
+            "total_tokens": 2382,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 1,
+          "client_id": "synthetic_client_f",
+          "text": "Теперь хочу снять четыре тысячи наличными.",
+          "expected": "Спросить купюры; прежний выбор не предлагать. Выполнение worker не должно восстановить удалённую память.",
+          "assertions": {
+            "commands": [],
+            "cash_offer": null,
+            "preference": null,
+            "slots": {
+              "amount": 4000
+            },
+            "erased_records": true
+          },
+          "clock": "2026-10-31T16:09:40.559847+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Какими купюрами выдать? Можно на выбор банкомата. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 4000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 4000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 149,
+            "input_tokens": 1918,
+            "total_tokens": 2067,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        }
+      ],
+      "workers": [
+        {
+          "expired": 0,
+          "artifacts_removed": 0,
+          "indexed": 0,
+          "discarded": 0,
+          "failed": 0,
+          "embedding_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "total_tokens": 0
+          },
+          "pending_jobs": 0,
+          "exhausted_jobs": 0
+        }
+      ]
+    },
+    {
+      "id": "M06",
+      "title": "Сроки хранения различаются",
+      "setup": "Использовать управляемые тестовые часы. Сдвиги отсчитываются от создания записей, без реального ожидания; чтение не продлевает TTL.",
+      "status": "failed",
+      "turns": [
+        {
+          "session": 1,
+          "turn": 1,
+          "client_id": "synthetic_client_g",
+          "text": "Сохрани мой обычный выбор: купюры по пятьсот рублей.",
+          "expected": "Создать профиль со сроком 180 дней.",
+          "assertions": {
+            "commands": [],
+            "preference": 500
+          },
+          "clock": "2026-10-31T16:09:51.462801+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Сохранено предпочтение на 180 дней: купюры по 500 ₽. При снятии уточню ваш выбор.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "preference",
+            "amount": null,
+            "denomination": 500,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": null,
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 1855
+            },
+            "input_tokens": 479,
+            "output_tokens": 273,
+            "total_tokens": 752
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 2,
+          "client_id": "synthetic_client_g",
+          "text": "Для одной операции выдай две тысячи тысячными.",
+          "expected": "Запросить подтверждение 2000/1000.",
+          "assertions": {
+            "commands": [],
+            "pending": {
+              "amount": 2000,
+              "denomination": 1000
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:09:51.462801+00:00",
+          "commands": [],
+          "failures": [
+            "pending: ожидалось {'amount': 2000, 'denomination': 1000}, получено None",
+            "confirmation_active: ожидалось True, получено False"
+          ],
+          "response": "Вы сохраняли предпочтение: купюры по 500 ₽. Использовать его для этого снятия?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 2000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 2000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 500,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:09:51.462801+00:00",
+            "expires_at": "2027-04-29T16:09:51.462801+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 155,
+            "input_tokens": 1987,
+            "total_tokens": 2142,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 3,
+          "client_id": "synthetic_client_g",
+          "text": "Подтверждаю именно эту выдачу.",
+          "expected": "Создать эпизод со сроком 30 дней.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "withdraw",
+                "amount": 2000,
+                "denomination": 1000
+              }
+            ]
+          },
+          "clock": "2026-10-31T16:09:51.462801+00:00",
+          "commands": [],
+          "failures": [
+            "Ожидалось команд: 1, получено: 0"
+          ],
+          "response": "Выдать 2000 ₽, купюрами по 500 ₽?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 2000,
+            "denomination": 500,
+            "notes": [],
+            "cash_choice": true
+          },
+          "pending": {
+            "request_id": "b9cd30064b9741cf91fe09eac62879ca",
+            "action": "withdraw",
+            "amount": 2000,
+            "denomination": 500,
+            "notes": []
+          },
+          "cash_offer": null,
+          "confirmation_active": true,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 171,
+            "input_tokens": 298,
+            "total_tokens": 469,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 1,
+          "client_id": "synthetic_client_g",
+          "text": "Хочу снять шесть тысяч наличными.",
+          "expected": "Через 31 день предложить действующий профиль 500; истёкший эпизод не использовать.",
+          "assertions": {
+            "commands": [],
+            "cash_offer": {
+              "denomination": 500
+            },
+            "slots": {
+              "amount": 6000
+            },
+            "preference": 500
+          },
+          "clock": "2026-12-01T16:09:51.462801+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Вы сохраняли предпочтение: купюры по 500 ₽. Использовать его для этого снятия? Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 6000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 6000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 500,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:09:51.462801+00:00",
+            "expires_at": "2027-04-29T16:09:51.462801+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 95,
+            "input_tokens": 1917,
+            "total_tokens": 2012,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 3,
+          "turn": 1,
+          "client_id": "synthetic_client_g",
+          "text": "Нужно получить восемь тысяч наличными.",
+          "expected": "Через 181 день спросить купюры без предложения истёкшего профиля.",
+          "assertions": {
+            "commands": [],
+            "cash_offer": null,
+            "slots": {
+              "amount": 8000
+            },
+            "preference": null
+          },
+          "clock": "2027-04-30T16:09:51.462801+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Какими купюрами выдать? Можно на выбор банкомата. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 8000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 8000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 151,
+            "input_tokens": 126,
+            "total_tokens": 277,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        }
+      ],
+      "workers": []
+    },
+    {
+      "id": "M07",
+      "title": "Смысловая память и свежесть",
+      "setup": "Подготовить два вымышленных успешных эпизода 6000/1000 одного клиента: 12 дней назад и сегодня. Создать векторы отдельным worker. Остальное содержание эпизодов одинаковое.",
+      "status": "passed",
+      "turns": [
+        {
+          "session": 1,
+          "turn": 1,
+          "client_id": "synthetic_client_h",
+          "text": "Напомни, какими купюрами я получала наличные раньше.",
+          "expected": "Найти оба эпизода; при одинаковой смысловой близости более новый ранжировать выше. Не выполнять снятие.",
+          "assertions": {
+            "commands": [],
+            "freshness": true
+          },
+          "clock": "2026-10-31T16:10:01.332247+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Успешная выдача 31.10.2026: 6000 ₽, купюры по 1000 ₽.\nУспешная выдача 19.10.2026: 6000 ₽, купюры по 1000 ₽.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "memory_recall",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": null,
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [
+            {
+              "kind": "withdrawal_episode",
+              "key": "newer",
+              "score": 0.47773792743682864,
+              "similarity": 0.34717240929603577,
+              "freshness": 1.0
+            },
+            {
+              "kind": "withdrawal_episode",
+              "key": "older",
+              "score": 0.42930958408786846,
+              "similarity": 0.34717240929603577,
+              "freshness": 0.7578582832551991
+            }
+          ],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 189,
+            "input_tokens": 135,
+            "total_tokens": 324,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 2,
+          "client_id": "synthetic_client_h",
+          "text": "Уважаемые пассажиры, проход к выходу номер девять временно закрыт.",
+          "expected": "Молчаливо проигнорировать; не сохранять как факт о клиенте.",
+          "assertions": {
+            "commands": [],
+            "background": true
+          },
+          "clock": "2026-10-31T16:10:01.332247+00:00",
+          "commands": [],
+          "failures": [],
+          "response": null,
+          "extracted": {
+            "relevance": "background",
+            "intent": "other"
+          },
+          "slots": null,
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 56,
+            "input_tokens": 242,
+            "total_tokens": 298,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        }
+      ],
+      "workers": [
+        {
+          "expired": 0,
+          "artifacts_removed": 0,
+          "indexed": 2,
+          "discarded": 0,
+          "failed": 0,
+          "embedding_usage": {
+            "requests": 1,
+            "prompt_tokens": 54,
+            "total_tokens": 54
+          },
+          "pending_jobs": 0,
+          "exhausted_jobs": 0
+        }
+      ]
+    },
+    {
+      "id": "M08",
+      "title": "Длинный диалог и память при следующем обращении",
+      "setup": "Пустой Store, подключённый RAG и ограниченный бюджет контекста. Перед репликой о сохранённых купюрах запустить отдельный worker; после первой сессии закрыть и снова открыть Store.",
+      "status": "failed",
+      "turns": [
+        {
+          "session": 1,
+          "turn": 1,
+          "client_id": "synthetic_client_i",
+          "text": "Приветствую, мне нужна наличность.",
+          "expected": "Начать снятие, спросить сумму.",
+          "assertions": {
+            "commands": []
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Какую сумму хотите снять?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw"
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 136,
+            "input_tokens": 66,
+            "total_tokens": 202,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 2,
+          "client_id": "synthetic_client_i",
+          "text": "Пусть будет двенадцать тысяч рублей.",
+          "expected": "Сохранить сумму 12000, спросить купюры.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            }
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Какими купюрами выдать? Можно на выбор банкомата. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 12000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 153,
+            "input_tokens": 171,
+            "total_tokens": 324,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 3,
+          "client_id": "synthetic_client_i",
+          "text": "С номиналом определюсь чуть позже.",
+          "expected": "Сохранить сумму, не выдавать деньги.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            }
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "pause",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 153,
+            "input_tokens": 244,
+            "total_tokens": 397,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 4,
+          "client_id": "synthetic_client_i",
+          "text": "Сначала проверь, сколько доступно на карте.",
+          "expected": "Выполнить get_balance; сохранить снятие.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "get_balance"
+              }
+            ],
+            "slots": {
+              "amount": 12000
+            }
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [
+            {
+              "request_id": "58b69fe8fc7d4c92b56bd00a6ff87237",
+              "action": "get_balance",
+              "amount": null,
+              "denomination": null,
+              "notes": []
+            }
+          ],
+          "failures": [],
+          "response": "Баланс: 50000 ₽.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "balance",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 153,
+            "input_tokens": 230,
+            "total_tokens": 383,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 5,
+          "client_id": "synthetic_client_i",
+          "text": "Какие части входят в договор СберПрайм на первое марта 2026 года?",
+          "expected": "Поиск по редакции на 2026-03-01 и ответ со ссылкой; сохранить снятие.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "source": "sberprime-offer@2026-03-01"
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Договор включает следующие части: 1) Общие условия — положения, применимые ко всем Договорам вне зависимости от наполнения Подписки. [sberprime-offer@2026-03-01, с. 1]\n2) Приложения — положения, применимые в зависимости от способа Подключения Подписки, включая Приложения «А»–«Е» с особенностями для разных сценариев. [sberprime-offer@2026-03-01, с. 1]",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "product",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [
+            {
+              "chunk_id": "sberprime-offer@2026-03-01:p0001:c00",
+              "source_id": "sberprime-offer@2026-03-01",
+              "path": "docs/offer_01.03.2026.pdf",
+              "page": 1,
+              "quote": "размещен по ссылке: https://www.sberbank.ru/sberprime/static/pdf/services_conditions.pdf."
+            }
+          ],
+          "rag_supported": true,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 1855
+            },
+            "input_tokens": 11887,
+            "output_tokens": 656,
+            "total_tokens": 12543
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 6,
+          "client_id": "synthetic_client_i",
+          "text": "К наличным я ещё вернусь.",
+          "expected": "Оставить операцию на паузе.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            }
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "pause",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 153,
+            "input_tokens": 305,
+            "total_tokens": 458,
+            "input_token_details": {
+              "cache_read": 1983
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 7,
+          "client_id": "synthetic_client_i",
+          "text": "Уважаемые пассажиры, не оставляйте багаж без присмотра.",
+          "expected": "Игнорировать фон.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "background": true
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": null,
+          "extracted": {
+            "relevance": "background",
+            "intent": "other"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 136,
+            "input_tokens": 293,
+            "total_tokens": 429,
+            "input_token_details": {
+              "cache_read": 2047
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 8,
+          "client_id": "synthetic_client_i",
+          "text": "Перечисли, что здесь можно сделать с деньгами.",
+          "expected": "Кратко объяснить операции, не теряя сумму.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            }
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Могу помочь со снятием, внесением наличных и балансом, а также проконсультировать по СберПрайм, СберСпасибо и СберКарте. Например, спросите, какие сервисы входят в СберПрайм.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "other",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 137,
+            "input_tokens": 485,
+            "total_tokens": 622,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 9,
+          "client_id": "synthetic_client_i",
+          "text": "Номинал я пока не выбрала.",
+          "expected": "Не считать это отказом от всей операции.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            }
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "pause",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 191,
+            "input_tokens": 2418,
+            "total_tokens": 2609,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 10,
+          "client_id": "synthetic_client_i",
+          "text": "А баланс можно посмотреть ещё раз?",
+          "expected": "Выполнить get_balance; не выдавать деньги.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "get_balance"
+              }
+            ],
+            "slots": {
+              "amount": 12000
+            }
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [
+            {
+              "request_id": "08cf1da46b3a470f8c590587799101f0",
+              "action": "get_balance",
+              "amount": null,
+              "denomination": null,
+              "notes": []
+            }
+          ],
+          "failures": [],
+          "response": "Баланс: 50000 ₽.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "balance",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 137,
+            "input_tokens": 163,
+            "total_tokens": 300,
+            "input_token_details": {
+              "cache_read": 2303
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 11,
+          "client_id": "synthetic_client_i",
+          "text": "Для будущих снятий запомни: предпочитаю тысячные купюры.",
+          "expected": "Сохранить явный профиль 1000; это не подтверждение выдачи.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Сохранено предпочтение на 180 дней: купюры по 1000 ₽. При снятии уточню ваш выбор. Можно продолжить текущее снятие.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "preference",
+            "amount": null,
+            "denomination": 1000,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 1,
+          "summary": "Клиент начал снятие наличных: запросил 12 000 ₽, номинал купюр пока не выбрал, баланс карты — 50 000 ₽. Затем сменил тему и спросил о составе договора СберПрайм на 01.03.2026. Получил ответ: договор включает Общие условия и Приложения «А»–«Е» с особенностями по сценариям подключения. Разговор о снятии приостановлен; клиент может продолжить командой «Продолжим снятие».",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 2238
+            },
+            "input_tokens": 1128,
+            "output_tokens": 384,
+            "total_tokens": 1512
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 12,
+          "client_id": "synthetic_client_i",
+          "text": "Сейчас ничего выдавать не надо, я думаю.",
+          "expected": "Пауза; сохранить 12000.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "pause",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 1,
+          "summary": "Клиент начал снятие наличных: запросил 12 000 ₽, номинал купюр пока не выбрал, баланс карты — 50 000 ₽. Затем сменил тему и спросил о составе договора СберПрайм на 01.03.2026. Получил ответ: договор включает Общие условия и Приложения «А»–«Е» с особенностями по сценариям подключения. Разговор о снятии приостановлен; клиент может продолжить командой «Продолжим снятие».",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 137,
+            "input_tokens": 573,
+            "total_tokens": 710,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 13,
+          "client_id": "synthetic_client_i",
+          "text": "СберПрайм на тридцатое сентября 2026 года: какие приложения у договора?",
+          "expected": "Найти сентябрьскую редакцию и дать ответ со ссылкой.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "source": "sberprime-offer@2026-09-30",
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Договор СберПрайм включает Общие условия и Приложения. [sberprime-offer@2026-09-30, с. 26]\nПриложения: «А» — полная оплата; «Б» — промокод; «В» — акции Банка/Партнёра; «Г» — платформа Партнёра; «Д» — пакет услуг; «Е» — совладельцы; «Ж» — опции. [sberprime-offer@2026-09-30, с. 1]",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "product",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 1,
+          "summary": "Клиент начал снятие наличных: запросил 12 000 ₽, номинал купюр пока не выбрал, баланс карты — 50 000 ₽. Затем сменил тему и спросил о составе договора СберПрайм на 01.03.2026. Получил ответ: договор включает Общие условия и Приложения «А»–«Е» с особенностями по сценариям подключения. Разговор о снятии приостановлен; клиент может продолжить командой «Продолжим снятие».",
+          "citations": [
+            {
+              "chunk_id": "sberprime-offer@2026-09-30:p0026:c00",
+              "source_id": "sberprime-offer@2026-09-30",
+              "path": "docs/offer.pdf",
+              "page": 26,
+              "quote": "усмотрению в любое время осуществить Отключение Подписки СберПрайм (при условии, что на дату предполагаемого Отключения Подписки Клиент не осуществил Возобновление Подписки). В"
+            },
+            {
+              "chunk_id": "sberprime-offer@2026-09-30:p0001:c00",
+              "source_id": "sberprime-offer@2026-09-30",
+              "path": "docs/offer.pdf",
+              "page": 1,
+              "quote": "частности: • Приложение «А» – условия Договора, применимые при Подключении Подписки с условием оплаты полной Стоимости Подписки, • Приложение «Б» – условия Договора, применимые при"
+            },
+            {
+              "chunk_id": "sberprime-offer@2026-09-30:p0001:c01",
+              "source_id": "sberprime-offer@2026-09-30",
+              "path": "docs/offer.pdf",
+              "page": 1,
+              "quote": "СберПрайм3 в рамках Пакета услуг. • Приложение «Е» – условия Договора, применимые при Подключении Подписки Совладельцами Подписки. • Приложение «Ж» – условия Договора, применимые"
+            }
+          ],
+          "rag_supported": true,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 2239
+            },
+            "input_tokens": 12346,
+            "output_tokens": 847,
+            "total_tokens": 13193
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 14,
+          "client_id": "synthetic_client_i",
+          "text": "Возьми пакет со стойки, пожалуйста.",
+          "expected": "Считать фоном или неоднозначным вводом: молчаливо проигнорировать, не выполнять команд и не менять операцию или память.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "background": true,
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": null,
+          "extracted": {
+            "relevance": "background",
+            "intent": "other"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 1,
+          "summary": "Клиент начал снятие наличных: запросил 12 000 ₽, номинал купюр пока не выбрал, баланс карты — 50 000 ₽. Затем сменил тему и спросил о составе договора СберПрайм на 01.03.2026. Получил ответ: договор включает Общие условия и Приложения «А»–«Е» с особенностями по сценариям подключения. Разговор о снятии приостановлен; клиент может продолжить командой «Продолжим снятие».",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 56,
+            "input_tokens": 276,
+            "total_tokens": 332,
+            "input_token_details": {
+              "cache_read": 2303
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 15,
+          "client_id": "synthetic_client_i",
+          "text": "Сумму для снятия оставляем прежней.",
+          "expected": "Сохранить 12000 без выдуманных изменений.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Вы сохраняли предпочтение: купюры по 1000 ₽. Использовать его для этого снятия?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "details",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 1,
+          "summary": "Клиент начал снятие наличных: запросил 12 000 ₽, номинал купюр пока не выбрал, баланс карты — 50 000 ₽. Затем сменил тему и спросил о составе договора СберПрайм на 01.03.2026. Получил ответ: договор включает Общие условия и Приложения «А»–«Е» с особенностями по сценариям подключения. Разговор о снятии приостановлен; клиент может продолжить командой «Продолжим снятие».",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 155,
+            "input_tokens": 213,
+            "total_tokens": 368,
+            "input_token_details": {
+              "cache_read": 2367
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 16,
+          "client_id": "synthetic_client_i",
+          "text": "Мне ещё понадобится минута.",
+          "expected": "Сохранить паузу.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "pause",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 1,
+          "summary": "Клиент начал снятие наличных: запросил 12 000 ₽, номинал купюр пока не выбрал, баланс карты — 50 000 ₽. Затем сменил тему и спросил о составе договора СберПрайм на 01.03.2026. Получил ответ: договор включает Общие условия и Приложения «А»–«Е» с особенностями по сценариям подключения. Разговор о снятии приостановлен; клиент может продолжить командой «Продолжим снятие».",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 161,
+            "input_tokens": 940,
+            "total_tokens": 1101,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 17,
+          "client_id": "synthetic_client_i",
+          "text": "Повтори доступный остаток на карте.",
+          "expected": "Выполнить get_balance.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "get_balance"
+              }
+            ],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [
+            {
+              "request_id": "d3a4ce2519de4344b6c14065322ae0e8",
+              "action": "get_balance",
+              "amount": null,
+              "denomination": null,
+              "notes": []
+            }
+          ],
+          "failures": [],
+          "response": "Баланс: 50000 ₽.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "balance",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 2,
+          "summary": "Разговор о снятии 12 000 ₽ приостановлен: номинал не выбран, баланс 50 000 ₽. Клиент уточнил доступные операции (снятие, внесение, баланс, СберПрайм, СберСпасибо, СберКарта) и повторно запросил баланс. На будущее зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии. Клиент заявил: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее обсуждалась отдельно.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 1791
+            },
+            "input_tokens": 1451,
+            "output_tokens": 341,
+            "total_tokens": 1792
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 18,
+          "client_id": "synthetic_client_i",
+          "text": "Какие купюры ты сохранил как мой обычный выбор?",
+          "expected": "Назвать профиль 1000; при поиске по памяти заранее запустить worker.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000,
+            "recall_preference": true
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Сохранённое предпочтение: купюры по 1000 ₽.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "memory_recall",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [
+            {
+              "kind": "cash_preference",
+              "key": "cash_preference",
+              "score": 0.5229555130004884,
+              "similarity": 0.40369439125061035,
+              "freshness": 1.0
+            }
+          ],
+          "deletion_report": null,
+          "summary_revision": 2,
+          "summary": "Разговор о снятии 12 000 ₽ приостановлен: номинал не выбран, баланс 50 000 ₽. Клиент уточнил доступные операции (снятие, внесение, баланс, СберПрайм, СберСпасибо, СберКарта) и повторно запросил баланс. На будущее зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии. Клиент заявил: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее обсуждалась отдельно.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 189,
+            "input_tokens": 2575,
+            "total_tokens": 2764,
+            "input_token_details": {
+              "cache_read": 0
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 19,
+          "client_id": "synthetic_client_i",
+          "text": "Это предпочтение, а выдачу я ещё не разрешала.",
+          "expected": "Не отправлять withdraw.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Вы сохраняли предпочтение: купюры по 1000 ₽. Использовать его для этого снятия?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 2,
+          "summary": "Разговор о снятии 12 000 ₽ приостановлен: номинал не выбран, баланс 50 000 ₽. Клиент уточнил доступные операции (снятие, внесение, баланс, СберПрайм, СберСпасибо, СберКарта) и повторно запросил баланс. На будущее зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии. Клиент заявил: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее обсуждалась отдельно.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 205,
+            "input_tokens": 835,
+            "total_tokens": 1040,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 20,
+          "client_id": "synthetic_client_i",
+          "text": "Вернёмся к наличным немного позже.",
+          "expected": "Сохранить незавершённую операцию.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Параметры сохранены. Когда будете готовы, скажите: «Продолжим снятие».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "pause",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 2,
+          "summary": "Разговор о снятии 12 000 ₽ приостановлен: номинал не выбран, баланс 50 000 ₽. Клиент уточнил доступные операции (снятие, внесение, баланс, СберПрайм, СберСпасибо, СберКарта) и повторно запросил баланс. На будущее зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии. Клиент заявил: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее обсуждалась отдельно.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 148,
+            "input_tokens": 826,
+            "total_tokens": 974,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 21,
+          "client_id": "synthetic_client_i",
+          "text": "Информационная стойка находится справа от зоны прилёта.",
+          "expected": "Игнорировать фон.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "background": true,
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": null,
+          "extracted": {
+            "relevance": "background",
+            "intent": "other"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 2,
+          "summary": "Разговор о снятии 12 000 ₽ приостановлен: номинал не выбран, баланс 50 000 ₽. Клиент уточнил доступные операции (снятие, внесение, баланс, СберПрайм, СберСпасибо, СберКарта) и повторно запросил баланс. На будущее зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии. Клиент заявил: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее обсуждалась отдельно.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 136,
+            "input_tokens": 750,
+            "total_tokens": 886,
+            "input_token_details": {
+              "cache_read": 1983
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 22,
+          "client_id": "synthetic_client_i",
+          "text": "Скажи, внесение наличных здесь тоже доступно?",
+          "expected": "Объяснить возможность без start_deposit и переключения операции.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [
+            {
+              "request_id": "95ac40a089b146038332bf48a03cf0be",
+              "action": "start_deposit",
+              "amount": null,
+              "denomination": null,
+              "notes": []
+            }
+          ],
+          "failures": [
+            "Ожидалось команд: 0, получено: 1"
+          ],
+          "response": "Внесите купюры в купюроприёмник.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "deposit",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 2,
+          "summary": "Разговор о снятии 12 000 ₽ приостановлен: номинал не выбран, баланс 50 000 ₽. Клиент уточнил доступные операции (снятие, внесение, баланс, СберПрайм, СберСпасибо, СберКарта) и повторно запросил баланс. На будущее зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии. Клиент заявил: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее обсуждалась отдельно.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 187,
+            "input_tokens": 942,
+            "total_tokens": 1129,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 23,
+          "client_id": "synthetic_client_i",
+          "text": "Вносить деньги сейчас не собираюсь.",
+          "expected": "Не создавать внесение; снятие остаётся на паузе.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "other",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 3,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил доступные операции, повторно запросил баланс и попросил минуту на раздумье. Зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии; клиент сказал: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Обсуждался договор СберПрайм на 30.09.2026: Общие условия и приложения «А»–«Ж». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее упоминалась отдельно. Содержательных сведений в свёрнутой части нет.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 0
+            },
+            "input_tokens": 3375,
+            "output_tokens": 375,
+            "total_tokens": 3750
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 24,
+          "client_id": "synthetic_client_i",
+          "text": "Я могу в этот раз выбрать другой номинал?",
+          "expected": "Объяснить разовый выбор, профиль не менять.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "details",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 3,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил доступные операции, повторно запросил баланс и попросил минуту на раздумье. Зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии; клиент сказал: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Обсуждался договор СберПрайм на 30.09.2026: Общие условия и приложения «А»–«Ж». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее упоминалась отдельно. Содержательных сведений в свёрнутой части нет.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 137,
+            "input_tokens": 740,
+            "total_tokens": 877,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 25,
+          "client_id": "synthetic_client_i",
+          "text": "Постоянное предпочтение менять не нужно.",
+          "expected": "Сохранить профиль 1000.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "preference",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "clear"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 3,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил доступные операции, повторно запросил баланс и попросил минуту на раздумье. Зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии; клиент сказал: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Обсуждался договор СберПрайм на 30.09.2026: Общие условия и приложения «А»–«Ж». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее упоминалась отдельно. Содержательных сведений в свёрнутой части нет.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 1791
+            },
+            "input_tokens": 1246,
+            "output_tokens": 227,
+            "total_tokens": 1473
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 26,
+          "client_id": "synthetic_client_i",
+          "text": "Перед выдачей снова покажи остаток.",
+          "expected": "Выполнить get_balance.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "get_balance"
+              }
+            ],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [
+            "Ожидалось команд: 1, получено: 0"
+          ],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "balance",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 3,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил доступные операции, повторно запросил баланс и попросил минуту на раздумье. Зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии; клиент сказал: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Обсуждался договор СберПрайм на 30.09.2026: Общие условия и приложения «А»–«Ж». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее упоминалась отдельно. Содержательных сведений в свёрнутой части нет.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 205,
+            "input_tokens": 786,
+            "total_tokens": 991,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 27,
+          "client_id": "synthetic_client_i",
+          "text": "Операцию пока сохраняем на паузе, я ещё не закончила проверку.",
+          "expected": "Сохранить параметры снятия без команды устройству.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "pause",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 3,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил доступные операции, повторно запросил баланс и попросил минуту на раздумье. Зафиксировано предпочтение купюр по 1000 ₽ на 180 дней с уточнением при снятии; клиент сказал: «К наличным я ещё вернусь» и может продолжить командой «Продолжим снятие». Обсуждался договор СберПрайм на 30.09.2026: Общие условия и приложения «А»–«Ж». Тема договора СберПрайм на 01.03.2026 (Общие условия и Приложения «А»–«Е») ранее упоминалась отдельно. Содержательных сведений в свёрнутой части нет.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 152,
+            "input_tokens": 773,
+            "total_tokens": 925,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 28,
+          "client_id": "synthetic_client_i",
+          "text": "Сумма та, что назвала в самом начале.",
+          "expected": "Не подменять 12000 балансом или суммами из других источников.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "details",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 4,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил, что сохранено предпочтение купюр по 1000 ₽, но выдачу не разрешал; попросил вернуться к наличным позже и продолжить командой «Продолжим снятие». Спросил о доступности внесения наличных, но вносить сейчас не собирается. Ожидание результата от банкомата. Обсуждался договор СберПрайм на 30.09.2026 (Общие условия и приложения «А»–«Ж»); ранее упоминался договор на 01.03.2026 (Общие условия и приложения «А»–«Е»).",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 1855
+            },
+            "input_tokens": 1287,
+            "output_tokens": 319,
+            "total_tokens": 1606
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 29,
+          "client_id": "synthetic_client_i",
+          "text": "Возвращаемся к начатому снятию.",
+          "expected": "Возобновить операцию с суммой 12000.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "resume",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 4,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил, что сохранено предпочтение купюр по 1000 ₽, но выдачу не разрешал; попросил вернуться к наличным позже и продолжить командой «Продолжим снятие». Спросил о доступности внесения наличных, но вносить сейчас не собирается. Ожидание результата от банкомата. Обсуждался договор СберПрайм на 30.09.2026 (Общие условия и приложения «А»–«Ж»); ранее упоминался договор на 01.03.2026 (Общие условия и приложения «А»–«Е»).",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 150,
+            "input_tokens": 653,
+            "total_tokens": 803,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 30,
+          "client_id": "synthetic_client_i",
+          "text": "Для этой выдачи выберу купюры по пятьсот рублей.",
+          "expected": "Подготовить 12000/500, запросить подтверждение; профиль остаётся 1000.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000,
+            "pending": {
+              "amount": 12000,
+              "denomination": 500
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [
+            "pending: ожидалось {'amount': 12000, 'denomination': 500}, получено None",
+            "confirmation_active: ожидалось True, получено False"
+          ],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "details",
+            "amount": null,
+            "denomination": 500,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 4,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил, что сохранено предпочтение купюр по 1000 ₽, но выдачу не разрешал; попросил вернуться к наличным позже и продолжить командой «Продолжим снятие». Спросил о доступности внесения наличных, но вносить сейчас не собирается. Ожидание результата от банкомата. Обсуждался договор СберПрайм на 30.09.2026 (Общие условия и приложения «А»–«Ж»); ранее упоминался договор на 01.03.2026 (Общие условия и приложения «А»–«Е»).",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 210,
+            "input_tokens": 634,
+            "total_tokens": 844,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 31,
+          "client_id": "synthetic_client_i",
+          "text": "Да, закажи мне чай.",
+          "expected": "Считать фоном или неоднозначным вводом: молчаливо проигнорировать, не выполнять команд и не менять операцию или память.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "background": true,
+            "preference": 1000
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": null,
+          "extracted": {
+            "relevance": "background",
+            "intent": "other"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 4,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил, что сохранено предпочтение купюр по 1000 ₽, но выдачу не разрешал; попросил вернуться к наличным позже и продолжить командой «Продолжим снятие». Спросил о доступности внесения наличных, но вносить сейчас не собирается. Ожидание результата от банкомата. Обсуждался договор СберПрайм на 30.09.2026 (Общие условия и приложения «А»–«Ж»); ранее упоминался договор на 01.03.2026 (Общие условия и приложения «А»–«Е»).",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 56,
+            "input_tokens": 738,
+            "total_tokens": 794,
+            "input_token_details": {
+              "cache_read": 1791
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 32,
+          "client_id": "synthetic_client_i",
+          "text": "Пока подожди, хочу проверить сумму.",
+          "expected": "Отключить принятие подтверждения, сохранить параметры.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000,
+            "confirmation_active": false
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "pause",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 4,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил, что сохранено предпочтение купюр по 1000 ₽, но выдачу не разрешал; попросил вернуться к наличным позже и продолжить командой «Продолжим снятие». Спросил о доступности внесения наличных, но вносить сейчас не собирается. Ожидание результата от банкомата. Обсуждался договор СберПрайм на 30.09.2026 (Общие условия и приложения «А»–«Ж»); ранее упоминался договор на 01.03.2026 (Общие условия и приложения «А»–«Е»).",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 150,
+            "input_tokens": 675,
+            "total_tokens": 825,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 33,
+          "client_id": "synthetic_client_i",
+          "text": "Продолжаем снятие двенадцати тысяч пятисотенными купюрами.",
+          "expected": "Повторить вопрос о подтверждении 12000/500.",
+          "assertions": {
+            "commands": [],
+            "slots": {
+              "amount": 12000
+            },
+            "preference": 1000,
+            "pending": {
+              "amount": 12000,
+              "denomination": 500
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [
+            "pending: ожидалось {'amount': 12000, 'denomination': 500}, получено None",
+            "confirmation_active: ожидалось True, получено False"
+          ],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "details",
+            "amount": 12000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 4,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент уточнил, что сохранено предпочтение купюр по 1000 ₽, но выдачу не разрешал; попросил вернуться к наличным позже и продолжить командой «Продолжим снятие». Спросил о доступности внесения наличных, но вносить сейчас не собирается. Ожидание результата от банкомата. Обсуждался договор СберПрайм на 30.09.2026 (Общие условия и приложения «А»–«Ж»); ранее упоминался договор на 01.03.2026 (Общие условия и приложения «А»–«Е»).",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 159,
+            "input_tokens": 722,
+            "total_tokens": 881,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 1,
+          "turn": 34,
+          "client_id": "synthetic_client_i",
+          "text": "Подтверждаю выдачу двенадцати тысяч этими купюрами.",
+          "expected": "Отправить единственный withdraw 12000/500; эпизод не меняет профиль.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "withdraw",
+                "amount": 12000,
+                "denomination": 500
+              }
+            ],
+            "preference": 1000,
+            "summarized": true
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [
+            "Ожидалось команд: 1, получено: 0"
+          ],
+          "response": "Ожидаю результат текущей операции от банкомата.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": 12000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 12000
+          },
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": 5,
+          "summary": "Снятие 12 000 ₽ не завершено: номинал не выбран, сумма сохранена. Баланс 50 000 ₽. Клиент подтвердил сумму, попросил не менять постоянное предпочтение купюр (1000 ₽) и разрешить разовый выбор другого номинала. Операция поставлена на паузу до проверки; перед выдачей клиент просит снова показать остаток. Для продолжения клиент использует команду «Продолжим снятие». Внесение наличных доступно, но сейчас не планируется. Обсуждался договор СберПрайм от 30.09.2026 (Общие условия и приложения «А»–«Ж»); ранее упоминался договор от 01.03.2026 (Общие условия и приложения «А»–«Е»). Ожидание результата от банкомата.",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "input_token_details": {
+              "cache_read": 1791
+            },
+            "input_tokens": 1319,
+            "output_tokens": 300,
+            "total_tokens": 1619
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 1,
+          "client_id": "synthetic_client_i",
+          "text": "Хочу получить десять тысяч наличными.",
+          "expected": "Предложить 1000 из профиля, а не 500 из разового эпизода; сумму 12000 не переносить.",
+          "assertions": {
+            "commands": [],
+            "cash_offer": {
+              "denomination": 1000
+            },
+            "slots": {
+              "amount": 10000
+            }
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Вы сохраняли предпочтение: купюры по 1000 ₽. Использовать его для этого снятия? Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "withdraw",
+            "amount": 10000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 10000
+          },
+          "pending": null,
+          "cash_offer": {
+            "kind": "cash_preference",
+            "denomination": 1000,
+            "atm_choice": false,
+            "created_at": "2026-10-31T16:10:07.207794+00:00",
+            "expires_at": "2027-04-29T16:10:07.207794+00:00"
+          },
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 151,
+            "input_tokens": 62,
+            "total_tokens": 213,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 2,
+          "client_id": "synthetic_client_i",
+          "text": "Мой обычный номинал подходит.",
+          "expected": "Принять купюры и запросить отдельное подтверждение.",
+          "assertions": {
+            "commands": [],
+            "pending": {
+              "amount": 10000,
+              "denomination": 1000
+            },
+            "confirmation_active": true
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [],
+          "failures": [],
+          "response": "Выдать 10000 ₽, купюрами по 1000 ₽?",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": null,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {
+            "action": "withdraw",
+            "amount": 10000,
+            "denomination": 1000,
+            "notes": [],
+            "cash_choice": true
+          },
+          "pending": {
+            "request_id": "42508f09b728409793dc851011bea206",
+            "action": "withdraw",
+            "amount": 10000,
+            "denomination": 1000,
+            "notes": []
+          },
+          "cash_offer": null,
+          "confirmation_active": true,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 192,
+            "input_tokens": 247,
+            "total_tokens": 439,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        },
+        {
+          "session": 2,
+          "turn": 3,
+          "client_id": "synthetic_client_i",
+          "text": "Подтверждаю выдачу десяти тысяч.",
+          "expected": "Отправить withdraw 10000/1000.",
+          "assertions": {
+            "commands": [
+              {
+                "action": "withdraw",
+                "amount": 10000,
+                "denomination": 1000
+              }
+            ]
+          },
+          "clock": "2026-10-31T16:10:07.207794+00:00",
+          "commands": [
+            {
+              "request_id": "42508f09b728409793dc851011bea206",
+              "action": "withdraw",
+              "amount": 10000,
+              "denomination": 1000,
+              "notes": []
+            }
+          ],
+          "failures": [],
+          "response": "Банкомат сообщил о выдаче 10000 ₽.",
+          "extracted": {
+            "relevance": "addressed",
+            "intent": "confirm",
+            "amount": 10000,
+            "denomination": null,
+            "notes": null,
+            "atm_choice": false,
+            "preference_action": "set"
+          },
+          "slots": {},
+          "pending": null,
+          "cash_offer": null,
+          "confirmation_active": false,
+          "memory_matches": [],
+          "deletion_report": null,
+          "summary_revision": null,
+          "summary": "",
+          "citations": [],
+          "rag_supported": false,
+          "turn_usage": {
+            "output_tokens": 150,
+            "input_tokens": 290,
+            "total_tokens": 440,
+            "input_token_details": {
+              "cache_read": 1855
+            }
+          },
+          "error": null,
+          "memory_error": null
+        }
+      ],
+      "workers": [
+        {
+          "expired": 0,
+          "artifacts_removed": 0,
+          "indexed": 1,
+          "discarded": 0,
+          "failed": 0,
+          "embedding_usage": {
+            "requests": 1,
+            "prompt_tokens": 23,
+            "total_tokens": 23
+          },
+          "pending_jobs": 0,
+          "exhausted_jobs": 0
+        }
+      ]
+    }
+  ],
+  "finished_at": "2026-10-31T16:12:17.377353+00:00",
+  "summary": {
+    "cases": 8,
+    "passed_cases": 3,
+    "turns": 70,
+    "passed_turns": 53,
+    "usage": {
+      "input_token_details": {
+        "cache_read": 85265
+      },
+      "input_tokens": 100874,
+      "output_tokens": 13168,
+      "total_tokens": 114042
+    },
+    "failed_cases": [
+      "M01",
+      "M02",
+      "M05",
+      "M06",
+      "M08"
+    ]
+  },
+  "background_checks": [
+    {
+      "case": "M07",
+      "session": 1,
+      "turn": 2,
+      "after": "Уважаемые пассажиры, проход к выходу номер девять временно закрыт.",
+      "passed": true,
+      "response": null,
+      "commands": []
+    },
+    {
+      "case": "M08",
+      "session": 1,
+      "turn": 7,
+      "after": "Уважаемые пассажиры, не оставляйте багаж без присмотра.",
+      "passed": true,
+      "response": null,
+      "commands": []
+    },
+    {
+      "case": "M08",
+      "session": 1,
+      "turn": 14,
+      "after": "Возьми пакет со стойки, пожалуйста.",
+      "passed": true,
+      "response": null,
+      "commands": []
+    },
+    {
+      "case": "M08",
+      "session": 1,
+      "turn": 21,
+      "after": "Информационная стойка находится справа от зоны прилёта.",
+      "passed": true,
+      "response": null,
+      "commands": []
+    },
+    {
+      "case": "M08",
+      "session": 1,
+      "turn": 31,
+      "after": "Да, закажи мне чай.",
+      "passed": true,
+      "response": null,
+      "commands": []
+    }
+  ],
+  "supplemental_confirmation_background_check": "confirmation_background_check.json",
+  "previous_run": "runs/before_natural_background/run_log.json",
+  "findings": [
+    "Все пять заменённых фоновых реплик прошли структурные проверки основного прогона.",
+    "M08.1.22: вопрос о доступности внесения ошибочно отправил start_deposit. Ожидание ответа устройства затем помешало завершить снятие. Поэтому M08.1.31 дополнительно проверена при активном ожидании подтверждения выдачи; извлечение распознало фон, команды и ответа не было.",
+    "В M01, M02, M05 и M06 сохраняются провалы с потерей явно названного номинала. Часть дальнейших провалов зависит от этих ошибок.",
+    "Число пройденных шагов нельзя трактовать как улучшение качества: входные реплики изменились, а ошибки ранних шагов меняют последующий диалог."
+  ]
+}

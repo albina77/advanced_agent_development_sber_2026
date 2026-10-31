@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_version": "0.2.0",
+  "temporal_policy": "until_next_loaded_revision",
+  "notes": [
+    "Состав ограничен предоставленными PDF; полнота исторических редакций не подтверждена.",
+    "Версия подписки СберПрайм 1–5 не является редакцией документа.",
+    "source_url не восстанавливается из имени файла или ссылок внутри PDF. Источник цитирования — локальный PDF и номер страницы.",
+    "Учебное допущение, согласованное пользователем: редакция действует до следующей загруженной редакции своего документа; явное окончание действия имеет приоритет. Для перечня партнеров началом учебного интервала считается дата маркера версии V."
+  ],
+  "documents": [
+    {
+      "source_id": "sberkarta-tariffs@undated-804f0852ff3f",
+      "document_id": "sberkarta-tariffs",
+      "product": "sberkarta",
+      "title": "Тарифы по дебетовым картам СберКарта",
+      "version": "undated-804f0852ff3f",
+      "revision_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "date_basis": "unknown",
+      "date_evidence": null,
+      "path": "docs/TP_Sberkarta2.pdf",
+      "sha256": "804f0852ff3f0fcdc98670a808d7fddf17e71cbc60c8a06dae43db9e41aa3e6e",
+      "source_type": "user_provided_pdf",
+      "source_url": null,
+      "note": "Дата редакции не обнаружена. Не подставлять дату загрузки или дату создания PDF."
+    },
+    {
+      "source_id": "sberspasibo-rules@2024-07-01",
+      "document_id": "sberspasibo-rules",
+      "product": "sberspasibo",
+      "title": "Правила программы лояльности СберСпасибо",
+      "version": "2024-07-01",
+      "revision_date": "2024-07-01",
+      "valid_from": "2024-07-01",
+      "valid_to": null,
+      "date_basis": "explicit",
+      "date_evidence": {
+        "page": 1,
+        "quote": "Редакция документа с 01.07.2024"
+      },
+      "path": "docs/pp_010724.pdf",
+      "sha256": "e64a932d302a55e98bb8a09e4775607eb6f41eccbf3e974a85364ab468d53e9c",
+      "source_type": "user_provided_pdf",
+      "source_url": null
+    },
+    {
+      "source_id": "sberspasibo-rules@2024-10-01",
+      "document_id": "sberspasibo-rules",
+      "product": "sberspasibo",
+      "title": "Правила программы лояльности СберСпасибо",
+      "version": "2024-10-01",
+      "revision_date": "2024-10-01",
+      "valid_from": "2024-10-01",
+      "valid_to": null,
+      "date_basis": "explicit",
+      "date_evidence": {
+        "page": 1,
+        "quote": "Редакция документа с 01.10.2024"
+      },
+      "path": "docs/pp_011024.pdf",
+      "sha256": "775c1311286722672072edaabf81b019d793e5b28ed53de10c8626ade6f552fd",
+      "source_type": "user_provided_pdf",
+      "source_url": null
+    },
+    {
+      "source_id": "sberspasibo-rules@2026-10-28",
+      "document_id": "sberspasibo-rules",
+      "product": "sberspasibo",
+      "title": "Правила программы лояльности СберСпасибо",
+      "version": "2026-10-28",
+      "revision_date": "2026-10-28",
+      "valid_from": "2026-10-28",
+      "valid_to": null,
+      "date_basis": "explicit",
+      "date_evidence": {
+        "page": 1,
+        "quote": "Редакция документа с 28.10.2026"
+      },
+      "path": "docs/loyalty_rules.pdf",
+      "sha256": "e8ebf5afb0fe291aefcc1ae3ac3fd1edf43db04566ec1da29d3c7ee1dd6f94c0",
+      "source_type": "user_provided_pdf",
+      "source_url": null
+    },
+    {
+      "source_id": "sberprime-offer@2025-10-22",
+      "document_id": "sberprime-offer",
+      "product": "sberprime",
+      "title": "Публичная оферта о Семействе подписок СберПрайм",
+      "version": "2025-10-22",
+      "revision_date": "2025-10-22",
+      "valid_from": "2025-10-22",
+      "valid_to": null,
+      "date_basis": "explicit",
+      "date_evidence": {
+        "page": 1,
+        "quote": "с «22» октября 2025 года"
+      },
+      "path": "docs/offer_22.10.2025.pdf",
+      "sha256": "0690c92713d31053db14d8e67c84cf51a3eaeaf2fe95121a6b38cc92208eba2a",
+      "source_type": "user_provided_pdf",
+      "source_url": null
+    },
+    {
+      "source_id": "sberprime-offer@2026-03-01",
+      "document_id": "sberprime-offer",
+      "product": "sberprime",
+      "title": "Публичная оферта о Семействе подписок СберПрайм",
+      "version": "2026-03-01",
+      "revision_date": "2026-03-01",
+      "valid_from": "2026-03-01",
+      "valid_to": null,
+      "date_basis": "explicit",
+      "date_evidence": {
+        "page": 1,
+        "quote": "с «01» марта 2026 года"
+      },
+      "path": "docs/offer_01.03.2026.pdf",
+      "sha256": "8acf996886b7b903455c5f82dc363e693464dde7e2f9606730c2db9420144d4c",
+      "source_type": "user_provided_pdf",
+      "source_url": null
+    },
+    {
+      "source_id": "sberprime-offer@2026-09-30",
+      "document_id": "sberprime-offer",
+      "product": "sberprime",
+      "title": "Публичная оферта о Семействе подписок СберПрайм",
+      "version": "2026-09-30",
+      "revision_date": "2026-09-30",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "date_basis": "explicit",
+      "date_evidence": {
+        "page": 1,
+        "quote": "с «30» сентября 2026 года"
+      },
+      "path": "docs/offer.pdf",
+      "sha256": "b88d22a50891dbbf0c2338d0394a35356b8b8670297d4bb32876d6e753029518",
+      "source_type": "user_provided_pdf",
+      "source_url": null
+    },
+    {
+      "source_id": "sberprime-services@2026-01-01",
+      "document_id": "sberprime-services",
+      "product": "sberprime",
+      "title": "Перечень партнеров и сервисов СберПрайм",
+      "version": "2026-01-01",
+      "revision_date": "2026-01-01",
+      "valid_from": null,
+      "valid_to": null,
+      "date_basis": "revision_marker",
+      "date_evidence": {
+        "page": 1,
+        "quote": "V 01.01.2026"
+      },
+      "path": "docs/partners_01.01.2026.pdf",
+      "sha256": "b79f23a109f095527b78c7c3bec32c61e8d892db7aaea55e97123d11cab2b1a6",
+      "source_type": "user_provided_pdf",
+      "source_url": null
+    },
+    {
+      "source_id": "sberprime-services@2026-10-27",
+      "document_id": "sberprime-services",
+      "product": "sberprime",
+      "title": "Перечень партнеров и сервисов СберПрайм",
+      "version": "2026-10-27",
+      "revision_date": "2026-10-27",
+      "valid_from": null,
+      "valid_to": null,
+      "date_basis": "revision_marker",
+      "date_evidence": {
+        "page": 2,
+        "quote": "V.27.10.2026"
+      },
+      "path": "docs/services_conditions.pdf",
+      "sha256": "7603b2db57b59d82f9e9de6cb426f2728b29126d2e2d84522a2e721836a27ba6",
+      "source_type": "user_provided_pdf",
+      "source_url": null
+    },
+    {
+      "source_id": "sberprime-bank-tariffs@2026-08-11",
+      "document_id": "sberprime-bank-tariffs",
+      "product": "sberprime",
+      "title": "Временные тарифы для тарифного плана СберПрайм",
+      "version": "2026-08-11",
+      "revision_date": "2026-08-11",
+      "valid_from": "2026-08-11",
+      "valid_to": "2027-03-18",
+      "date_basis": "explicit",
+      "date_evidence": {
+        "page": 1,
+        "quote": "Редакция вводится в действие с 11.08.2026"
+      },
+      "path": "docs/rateplansberprime.pdf",
+      "sha256": "c16ca011ef826d3451aaa9df8c217ea271c2eadd48d89e56e60c8ebfec572260",
+      "source_type": "user_provided_pdf",
+      "source_url": null,
+      "tariff_period": {
+        "from": "2023-10-02",
+        "through": "2027-03-17"
+      },
+      "note": "Период тарифов не равен периоду действия редакции: редакция введена 11.08.2026. Граница valid_to исключающая."
+    }
+  ]
+}

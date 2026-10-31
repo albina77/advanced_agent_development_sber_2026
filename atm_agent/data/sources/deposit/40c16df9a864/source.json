@@ -1,0 +1,15 @@
+{
+  "source_id": "deposit",
+  "requested_url": "https://www.sberbank.ru/ru/person/contributions/deposits/best",
+  "final_url": "https://www.sberbank.ru/ru/person/contributions/deposits/best",
+  "fetched_at": "2026-10-26T13:31:03.816564+00:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8, text/html",
+  "sha256": "40c16df9a864faf197458358ad1e8359bbe988d966097118dfffb3c5d363724d",
+  "text": "sberbank.ru\nВозникла проблема при открытии сайта Сбербанка в этом браузере.\nВозможно у Вас не установлены сертификаты Национального УЦ Минцифры России.\nОзнакомиться с инструкциями по установке можно на\nhttps://www.gosuslugi.ru/crt\nЛибо попробуйте войти на сайт в другом браузере по ссылке\nhttps://www.sberbank.com/ru/certificates\nЕсли ошибка повторится позвоните нам по номеру 900 или + 7495 500-55-50, если Вы за границей, и сообщите ваш Support ID\nSupport ID:\n<\n8935934580409137693>\n[Назад]",
+  "links": [
+    "https://www.gosuslugi.ru/crt",
+    "https://www.sberbank.com/ru/certificates",
+    "javascript:history.back();"
+  ]
+}

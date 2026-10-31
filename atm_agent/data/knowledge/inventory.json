@@ -1,0 +1,17 @@
+{
+  "corpus_version": "0.2.0",
+  "temporal_policy": "until_next_loaded_revision",
+  "document_count": 10,
+  "page_count": 486,
+  "document_families": 5,
+  "undated_sources": [
+    "sberkarta-tariffs@undated-804f0852ff3f"
+  ],
+  "marker_only_sources": [
+    "sberprime-services@2026-01-01",
+    "sberprime-services@2026-10-27"
+  ],
+  "effective_after_inspection_date": [],
+  "inspection_date": "2026-10-28",
+  "index_built": false
+}

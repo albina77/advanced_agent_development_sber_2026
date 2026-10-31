@@ -1,0 +1,61 @@
+{
+  "source": "run_log.json",
+  "source_started_at": "2026-10-31T17:37:56.242969+00:00",
+  "dataset_sha256": "75588913a771a1b7a32db39cee1c78cc14c165c6d676d270b73c1c8c618c1d1c",
+  "case": "M08",
+  "passed": true,
+  "checks": {
+    "m08_all_steps_passed": true,
+    "initial_amount_12000": true,
+    "no_amount_in_resume": true,
+    "saved_amount_named": true,
+    "no_command_before_confirmation": true,
+    "confirmed_command_12000_500": true,
+    "capability_question_no_command": true,
+    "preference_kept": true,
+    "history_summarized": true
+  },
+  "first_amount_turn": {
+    "turn": 2,
+    "text": "Пусть будет двенадцать тысяч рублей.",
+    "slots": {
+      "action": "withdraw",
+      "amount": 12000
+    }
+  },
+  "resume_turn": {
+    "turn": 33,
+    "text": "Продолжим начатое снятие. Купюры я уже выбрала.",
+    "response": "Выдать 12000 ₽, купюрами по 500 ₽?",
+    "extracted": {
+      "relevance": "addressed",
+      "intent": "resume",
+      "amount": null,
+      "denomination": null,
+      "notes": null,
+      "atm_choice": false,
+      "preference_action": "set"
+    },
+    "pending": {
+      "request_id": "701d92e1e6b84f5d828c51c18426bf97",
+      "action": "withdraw",
+      "amount": 12000,
+      "denomination": 500,
+      "notes": []
+    }
+  },
+  "confirmation_turn": {
+    "turn": 34,
+    "text": "Да, подтверждаю эту выдачу.",
+    "response": "Банкомат сообщил о выдаче 12000 ₽.",
+    "commands": [
+      {
+        "request_id": "701d92e1e6b84f5d828c51c18426bf97",
+        "action": "withdraw",
+        "amount": 12000,
+        "denomination": 500,
+        "notes": []
+      }
+    ]
+  }
+}

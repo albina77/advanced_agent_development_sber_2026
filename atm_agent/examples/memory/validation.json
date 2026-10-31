@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "dataset_sha256": "75588913a771a1b7a32db39cee1c78cc14c165c6d676d270b73c1c8c618c1d1c",
+  "cases": 8,
+  "sessions": 17,
+  "utterances": 70,
+  "normalized_exact_matches": 0,
+  "utterances_with_shared_8_word_sequences": 0,
+  "limitations": "Проверка совпадений не является формальной гарантией анонимности. Исходные строки не сохраняются. Живой прогон хранится в run_log.json."
+}

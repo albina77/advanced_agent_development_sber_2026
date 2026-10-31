@@ -1,0 +1,10 @@
+{
+  "chunking": {
+    "version": "1.0.0",
+    "max_chars": 2600,
+    "overlap_chars": 350
+  },
+  "chunk_count": 944,
+  "max_chars": 2744,
+  "dense_index_built": false
+}

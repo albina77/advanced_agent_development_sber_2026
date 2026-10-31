@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-31T16:13:27.939537+00:00",
+  "mode": "Живой GigaChatExtractor и переход handle_turn; подготовленное состояние ожидания подтверждения. Дополнительная проверка вне основного прогона 70 реплик.",
+  "text": "Да, закажи мне чай.",
+  "before": {
+    "pending": {
+      "request_id": "7461ee8b68b94360bb19f185393b0715",
+      "action": "withdraw",
+      "amount": 12000,
+      "denomination": 500,
+      "notes": []
+    },
+    "confirmation_active": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "Для этой выдачи выберу купюры по пятьсот рублей."
+      },
+      {
+        "role": "assistant",
+        "content": "Выдать 12000 ₽, купюрами по 500 ₽?"
+      }
+    ]
+  },
+  "extracted": {
+    "relevance": "background",
+    "intent": "other",
+    "amount": null,
+    "denomination": null,
+    "notes": null,
+    "atm_choice": false,
+    "preference_action": "set"
+  },
+  "response": null,
+  "checks": {
+    "no_command": true,
+    "pending_preserved": true,
+    "silent": true
+  },
+  "passed": true,
+  "usage": {
+    "output_tokens": 174,
+    "input_tokens": 284,
+    "total_tokens": 458,
+    "input_token_details": {
+      "cache_read": 1791
+    }
+  }
+}

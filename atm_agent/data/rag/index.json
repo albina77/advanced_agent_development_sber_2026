@@ -1,0 +1,30 @@
+{
+  "corpus_signature": "759bc1a53d42f67b77bca806ae2c6d885d64777bf5e2055b23548248a6bb5ff0",
+  "chunking": {
+    "version": "1.0.0",
+    "max_chars": 2600,
+    "overlap_chars": 350
+  },
+  "embedding_model": "cloud_ru/ai-sage/Giga-Embeddings-instruct-3B",
+  "dimensions": 2048,
+  "embedding_usage_this_run": {
+    "requests": 59,
+    "prompt_tokens": 519812,
+    "total_tokens": 519812
+  },
+  "query_prefix": "Instruct: Дан вопрос, необходимо найти абзац текста с ответом\nQuery: ",
+  "chunk_count": 944,
+  "document_count": 10,
+  "bm25": {
+    "backend": "bm25s",
+    "k1": 1.5,
+    "b": 0.75,
+    "lemmatizer": "pymorphy3"
+  },
+  "fusion": {
+    "algorithm": "RRF",
+    "rank_constant": 60
+  },
+  "reranker": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "reranker_revision": "1427fd652930e4ba29e8149678df786c240d8825"
+}

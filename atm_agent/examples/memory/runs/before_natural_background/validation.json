@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "cases": 8,
+  "sessions": 17,
+  "utterances": 70,
+  "normalized_exact_matches": 0,
+  "utterances_with_shared_8_word_sequences": 0,
+  "live_model_run": false,
+  "limitations": "Проверка совпадений не является формальной гарантией анонимности. Исходные строки и связь с ними не сохраняются."
+}
