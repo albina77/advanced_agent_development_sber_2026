@@ -21,4 +21,7 @@ atm_agent/data/rag/models/
 atm_agent/data/rag/embedding_cache.sqlite3*
 atm_agent/data/rag/vectors.npy
 atm_agent/data/rag/runs/
-atm_agent/data/memory/
+atm_agent/data/memory/*
+!atm_agent/data/memory/lifecycle_report.json
+!atm_agent/data/memory/scenario_report.json
+!atm_agent/data/memory/retrieval_probe.json

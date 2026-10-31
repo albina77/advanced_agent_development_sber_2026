@@ -1,0 +1,463 @@
+{
+  "passed": true,
+  "turns": [
+    {
+      "response": "Выдать 7000 ₽, купюрами по 1000 ₽?",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "withdraw",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "usage": {
+        "output_tokens": 114,
+        "input_tokens": 1213,
+        "total_tokens": 1327,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_matches": [],
+      "memory_index_status": {},
+      "deletion_report": null,
+      "text": "Сними 7000 рублей купюрами по 1000 рублей",
+      "commands": 0
+    },
+    {
+      "response": "Банкомат сообщил о выдаче 7000 ₽. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "confirm",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "usage": {
+        "output_tokens": 130,
+        "input_tokens": 1358,
+        "total_tokens": 1488,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_matches": [],
+      "memory_index_status": {},
+      "deletion_report": null,
+      "text": "Да",
+      "commands": 1
+    },
+    {
+      "response": "Выдать 7000 ₽, купюрами по 1000 ₽?",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "withdraw",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "usage": {
+        "output_tokens": 130,
+        "input_tokens": 1213,
+        "total_tokens": 1343,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_matches": [],
+      "memory_index_status": {},
+      "deletion_report": null,
+      "text": "Сними 7000 рублей купюрами по 1000 рублей",
+      "commands": 1
+    },
+    {
+      "response": "Банкомат сообщил о выдаче 7000 ₽. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "confirm",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "usage": {
+        "output_tokens": 130,
+        "input_tokens": 1359,
+        "total_tokens": 1489,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_matches": [],
+      "memory_index_status": {},
+      "deletion_report": null,
+      "text": "Да",
+      "commands": 2
+    },
+    {
+      "response": "Сохранено предпочтение на 180 дней: купюры по 500 ₽. При снятии уточню ваш выбор.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "preference",
+        "amount": null,
+        "denomination": 500,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "usage": {
+        "total_tokens": 1945,
+        "input_token_details": {
+          "cache_read": 0
+        },
+        "input_tokens": 1742,
+        "output_tokens": 203
+      },
+      "memory_matches": [],
+      "memory_index_status": {},
+      "deletion_report": null,
+      "text": "Запомни: обычно выдавай купюрами по 500 рублей",
+      "commands": 2
+    },
+    {
+      "response": "Сохранённое предпочтение: купюры по 500 ₽.\nУспешная выдача 29.10.2026: 7000 ₽, купюры по 1000 ₽.\nУспешная выдача 19.10.2026: 7000 ₽, купюры по 1000 ₽.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "memory_recall",
+        "amount": 0,
+        "denomination": 0,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "usage": {
+        "output_tokens": 126,
+        "input_tokens": 1397,
+        "total_tokens": 1523,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_matches": [
+        {
+          "kind": "cash_preference",
+          "key": "cash_preference",
+          "score": 0.4196011781692505,
+          "similarity": 0.2745014727115631,
+          "freshness": 1.0
+        },
+        {
+          "kind": "withdrawal_episode",
+          "key": "165ac21d816e4a13846fb0e20551e437",
+          "score": 0.30771043300628664,
+          "similarity": 0.13463804125785828,
+          "freshness": 1.0
+        },
+        {
+          "kind": "withdrawal_episode",
+          "key": "920ee8c7aca149d0a1c69c588a95e724",
+          "score": 0.2664505382031066,
+          "similarity": 0.13463804125785828,
+          "freshness": 0.7937005259840997
+        }
+      ],
+      "memory_index_status": {
+        "ready": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "deletion_report": null,
+      "text": "Что ты помнишь о моих предпочтениях и прошлых снятиях?",
+      "commands": 2
+    },
+    {
+      "response": "Предпочтения, эпизоды, поисковые векторы и история сессий удалены. Минимальные служебные квитанции и аудит сохраняются до окончания учебного срока хранения (365 дней с даты записи).",
+      "extracted": null,
+      "usage": {
+        "output_tokens": 125,
+        "input_tokens": 1520,
+        "total_tokens": 1645,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_matches": null,
+      "memory_index_status": null,
+      "deletion_report": {
+        "deleted_records": 3,
+        "retained_receipts": 2,
+        "retention_days": 365,
+        "artifacts_removed": 0
+      },
+      "text": "Удали всю память обо мне, включая предпочтения и историю",
+      "commands": 2
+    },
+    {
+      "response": "По этому вопросу подходящих записей памяти не найдено.",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "memory_recall",
+        "amount": null,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "usage": {
+        "output_tokens": 59,
+        "input_tokens": 1203,
+        "total_tokens": 1262,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_matches": [],
+      "memory_index_status": {
+        "ready": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "deletion_report": null,
+      "text": "Что ты помнишь обо мне?",
+      "commands": 2
+    }
+  ],
+  "clock_is_simulated": true,
+  "worker": {
+    "expired": 0,
+    "artifacts_removed": 0,
+    "indexed": 3,
+    "discarded": 0,
+    "failed": 0,
+    "embedding_usage": {
+      "requests": 1,
+      "prompt_tokens": 76,
+      "total_tokens": 76
+    },
+    "pending_jobs": 0,
+    "exhausted_jobs": 0
+  },
+  "freshness_comparison": {
+    "older": {
+      "kind": "withdrawal_episode",
+      "key": "920ee8c7aca149d0a1c69c588a95e724",
+      "score": 0.2664505382031066,
+      "similarity": 0.13463804125785828,
+      "freshness": 0.7937005259840997
+    },
+    "newer": {
+      "kind": "withdrawal_episode",
+      "key": "165ac21d816e4a13846fb0e20551e437",
+      "score": 0.30771043300628664,
+      "similarity": 0.13463804125785828,
+      "freshness": 1.0
+    }
+  },
+  "worker_after_erasure": {
+    "expired": 0,
+    "artifacts_removed": 0,
+    "indexed": 0,
+    "discarded": 0,
+    "failed": 0,
+    "embedding_usage": {
+      "requests": 0,
+      "prompt_tokens": 0,
+      "total_tokens": 0
+    },
+    "pending_jobs": 0,
+    "exhausted_jobs": 0
+  },
+  "receipts_after_erasure": [
+    {
+      "request_id": "165ac21d816e4a13846fb0e20551e437",
+      "action": "withdraw",
+      "status": "completed",
+      "completed_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00"
+    },
+    {
+      "request_id": "920ee8c7aca149d0a1c69c588a95e724",
+      "action": "withdraw",
+      "status": "completed",
+      "completed_at": "2026-10-19T13:34:33.714012+00:00",
+      "retain_until": "2027-10-19T13:34:33.714012+00:00"
+    }
+  ],
+  "audit_after_erasure": [
+    {
+      "operation": "create",
+      "role": "episodes",
+      "key_token": "6d9e78b43d6603ac979c265d2854338891f5f7ce7413752be0ee50dd4f191f7a",
+      "occurred_at": "2026-10-19T13:34:33.714012+00:00",
+      "retain_until": "2027-10-19T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "read",
+      "role": "episodes",
+      "key_token": "6d9e78b43d6603ac979c265d2854338891f5f7ce7413752be0ee50dd4f191f7a",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "read",
+      "role": "episodes",
+      "key_token": "6d9e78b43d6603ac979c265d2854338891f5f7ce7413752be0ee50dd4f191f7a",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "create",
+      "role": "episodes",
+      "key_token": "9ba54b75ba76ebe9c4386ca61d61cd44b6cc1eaed5b507956ed08ab996503d74",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "read",
+      "role": "episodes",
+      "key_token": "9ba54b75ba76ebe9c4386ca61d61cd44b6cc1eaed5b507956ed08ab996503d74",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "read",
+      "role": "episodes",
+      "key_token": "6d9e78b43d6603ac979c265d2854338891f5f7ce7413752be0ee50dd4f191f7a",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "create",
+      "role": "profile",
+      "key_token": "02cbaaa92b22e821f66e9975744885c88c2b9544c11735e05336e095d6690489",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "read",
+      "role": "profile",
+      "key_token": "02cbaaa92b22e821f66e9975744885c88c2b9544c11735e05336e095d6690489",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "read",
+      "role": "profile",
+      "key_token": "02cbaaa92b22e821f66e9975744885c88c2b9544c11735e05336e095d6690489",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "index",
+      "role": "episodes",
+      "key_token": "6d9e78b43d6603ac979c265d2854338891f5f7ce7413752be0ee50dd4f191f7a",
+      "occurred_at": "2026-10-29T13:34:43.833294+00:00",
+      "retain_until": "2027-10-29T13:34:43.833294+00:00",
+      "reason": "background_worker"
+    },
+    {
+      "operation": "index",
+      "role": "episodes",
+      "key_token": "9ba54b75ba76ebe9c4386ca61d61cd44b6cc1eaed5b507956ed08ab996503d74",
+      "occurred_at": "2026-10-29T13:34:43.833511+00:00",
+      "retain_until": "2027-10-29T13:34:43.833511+00:00",
+      "reason": "background_worker"
+    },
+    {
+      "operation": "index",
+      "role": "profile",
+      "key_token": "02cbaaa92b22e821f66e9975744885c88c2b9544c11735e05336e095d6690489",
+      "occurred_at": "2026-10-29T13:34:43.833590+00:00",
+      "retain_until": "2027-10-29T13:34:43.833590+00:00",
+      "reason": "background_worker"
+    },
+    {
+      "operation": "read",
+      "role": "profile",
+      "key_token": "02cbaaa92b22e821f66e9975744885c88c2b9544c11735e05336e095d6690489",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "search",
+      "role": "profile",
+      "key_token": "02cbaaa92b22e821f66e9975744885c88c2b9544c11735e05336e095d6690489",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "semantic_and_recency"
+    },
+    {
+      "operation": "search",
+      "role": "episodes",
+      "key_token": "9ba54b75ba76ebe9c4386ca61d61cd44b6cc1eaed5b507956ed08ab996503d74",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "semantic_and_recency"
+    },
+    {
+      "operation": "search",
+      "role": "episodes",
+      "key_token": "6d9e78b43d6603ac979c265d2854338891f5f7ce7413752be0ee50dd4f191f7a",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "semantic_and_recency"
+    },
+    {
+      "operation": "read",
+      "role": "profile",
+      "key_token": "02cbaaa92b22e821f66e9975744885c88c2b9544c11735e05336e095d6690489",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "dialogue"
+    },
+    {
+      "operation": "delete",
+      "role": "episodes",
+      "key_token": "9ba54b75ba76ebe9c4386ca61d61cd44b6cc1eaed5b507956ed08ab996503d74",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "user_erasure"
+    },
+    {
+      "operation": "delete",
+      "role": "episodes",
+      "key_token": "6d9e78b43d6603ac979c265d2854338891f5f7ce7413752be0ee50dd4f191f7a",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "user_erasure"
+    },
+    {
+      "operation": "delete",
+      "role": "profile",
+      "key_token": "02cbaaa92b22e821f66e9975744885c88c2b9544c11735e05336e095d6690489",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "user_erasure"
+    },
+    {
+      "operation": "erase",
+      "role": "privacy",
+      "key_token": "7cd07a7aff66ba4afe6477bca1beaaf4714c96f2447544ccb0272a1d7ee94046",
+      "occurred_at": "2026-10-29T13:34:33.714012+00:00",
+      "retain_until": "2027-10-29T13:34:33.714012+00:00",
+      "reason": "user_request"
+    }
+  ]
+}

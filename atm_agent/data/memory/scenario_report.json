@@ -1,0 +1,377 @@
+{
+  "passed": true,
+  "turns": [
+    {
+      "client_id": "demo_memory",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "withdraw",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": [],
+        "cash_choice": true
+      },
+      "pending": {
+        "request_id": "a8f2bc759c0246f9806da6bb68fdaa9c",
+        "action": "withdraw",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": []
+      },
+      "cash_offer": null,
+      "confirmation_active": true,
+      "response": "Выдать 7000 ₽, купюрами по 1000 ₽?",
+      "usage": {
+        "output_tokens": 130,
+        "input_tokens": 1076,
+        "total_tokens": 1206,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_error": null,
+      "result": null,
+      "text": "Сними 7000 рублей купюрами по 1000 рублей",
+      "command_count": 0
+    },
+    {
+      "client_id": "demo_memory",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "confirm",
+        "amount": 7000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {},
+      "pending": null,
+      "cash_offer": null,
+      "confirmation_active": false,
+      "response": "Банкомат сообщил о выдаче 7000 ₽. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+      "usage": {
+        "output_tokens": 130,
+        "input_tokens": 1220,
+        "total_tokens": 1350,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_error": null,
+      "result": {
+        "request_id": "a8f2bc759c0246f9806da6bb68fdaa9c",
+        "status": "completed",
+        "balance": null,
+        "amount": 7000,
+        "message": ""
+      },
+      "text": "Да",
+      "command_count": 1
+    },
+    {
+      "client_id": "demo_memory",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "withdraw",
+        "amount": 9000,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 9000
+      },
+      "pending": null,
+      "cash_offer": {
+        "kind": "withdrawal_episode",
+        "denomination": 1000,
+        "atm_choice": false,
+        "created_at": "2026-10-29T11:25:41.680881+00:00",
+        "expires_at": "2026-11-28T11:25:41.680881+00:00"
+      },
+      "confirmation_active": false,
+      "response": "В прошлый раз вы выбрали купюры по 1000 ₽. Выбрать так же для этого снятия? Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+      "usage": {
+        "output_tokens": 76,
+        "input_tokens": 1066,
+        "total_tokens": 1142,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_error": null,
+      "result": null,
+      "text": "Сними 9000 рублей",
+      "command_count": 1
+    },
+    {
+      "client_id": "demo_memory",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "confirm",
+        "amount": 9000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 9000,
+        "denomination": 1000,
+        "notes": [],
+        "cash_choice": true
+      },
+      "pending": {
+        "request_id": "4468b64e8b2a459eb13b253a99a08497",
+        "action": "withdraw",
+        "amount": 9000,
+        "denomination": 1000,
+        "notes": []
+      },
+      "cash_offer": null,
+      "confirmation_active": true,
+      "response": "Выдать 9000 ₽, купюрами по 1000 ₽?",
+      "usage": {
+        "output_tokens": 130,
+        "input_tokens": 1247,
+        "total_tokens": 1377,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_error": null,
+      "result": null,
+      "text": "Да",
+      "command_count": 1
+    },
+    {
+      "client_id": "demo_memory",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "confirm",
+        "amount": 9000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {},
+      "pending": null,
+      "cash_offer": null,
+      "confirmation_active": false,
+      "response": "Банкомат сообщил о выдаче 9000 ₽.",
+      "usage": {
+        "output_tokens": 130,
+        "input_tokens": 1280,
+        "total_tokens": 1410,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_error": null,
+      "result": {
+        "request_id": "4468b64e8b2a459eb13b253a99a08497",
+        "status": "completed",
+        "balance": null,
+        "amount": 9000,
+        "message": ""
+      },
+      "text": "Да",
+      "command_count": 2
+    },
+    {
+      "client_id": "demo_memory",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "preference",
+        "amount": null,
+        "denomination": 500,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {},
+      "pending": null,
+      "cash_offer": null,
+      "confirmation_active": false,
+      "response": "Сохранено предпочтение на 180 дней: купюры по 500 ₽. При снятии уточню ваш выбор.",
+      "usage": {
+        "input_token_details": {
+          "cache_read": 0
+        },
+        "input_tokens": 1643,
+        "output_tokens": 203,
+        "total_tokens": 1846
+      },
+      "memory_error": null,
+      "result": null,
+      "text": "Запомни: обычно выдавай купюрами по 500 рублей",
+      "command_count": 2
+    },
+    {
+      "client_id": "demo_memory",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "withdraw",
+        "amount": 8000,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 8000
+      },
+      "pending": null,
+      "cash_offer": {
+        "kind": "cash_preference",
+        "denomination": 500,
+        "atm_choice": false,
+        "created_at": "2026-10-29T11:25:47.821644+00:00",
+        "expires_at": "2027-04-27T11:25:47.821644+00:00"
+      },
+      "confirmation_active": false,
+      "response": "Вы сохраняли предпочтение: купюры по 500 ₽. Использовать его для этого снятия? Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+      "usage": {
+        "output_tokens": 76,
+        "input_tokens": 1066,
+        "total_tokens": 1142,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_error": null,
+      "result": null,
+      "text": "Сними 8000 рублей",
+      "command_count": 2
+    },
+    {
+      "client_id": "demo_memory",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "details",
+        "amount": 8000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 8000,
+        "denomination": 1000,
+        "notes": [],
+        "cash_choice": true
+      },
+      "pending": {
+        "request_id": "c3b8eff08fef45a39e436ba0fac8a644",
+        "action": "withdraw",
+        "amount": 8000,
+        "denomination": 1000,
+        "notes": []
+      },
+      "cash_offer": null,
+      "confirmation_active": true,
+      "response": "Выдать 8000 ₽, купюрами по 1000 ₽?",
+      "usage": {
+        "output_tokens": 130,
+        "input_tokens": 1256,
+        "total_tokens": 1386,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_error": null,
+      "result": null,
+      "text": "Для этого снятия хочу купюрами по 1000 рублей",
+      "command_count": 2
+    },
+    {
+      "client_id": "demo_memory",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "confirm",
+        "amount": 8000,
+        "denomination": 1000,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {},
+      "pending": null,
+      "cash_offer": null,
+      "confirmation_active": false,
+      "response": "Банкомат сообщил о выдаче 8000 ₽.",
+      "usage": {
+        "output_tokens": 130,
+        "input_tokens": 1286,
+        "total_tokens": 1416,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_error": null,
+      "result": {
+        "request_id": "c3b8eff08fef45a39e436ba0fac8a644",
+        "status": "completed",
+        "balance": null,
+        "amount": 8000,
+        "message": ""
+      },
+      "text": "Да",
+      "command_count": 3
+    },
+    {
+      "client_id": "other_client",
+      "extracted": {
+        "relevance": "addressed",
+        "intent": "withdraw",
+        "amount": 8000,
+        "denomination": null,
+        "notes": null,
+        "atm_choice": false,
+        "preference_action": "set"
+      },
+      "slots": {
+        "action": "withdraw",
+        "amount": 8000
+      },
+      "pending": null,
+      "cash_offer": null,
+      "confirmation_active": false,
+      "response": "Какими купюрами выдать? Можно на выбор банкомата. Чтобы сохранить предпочтение, скажите: «Запомни: обычно выдавай тысячными».",
+      "usage": {
+        "output_tokens": 76,
+        "input_tokens": 1066,
+        "total_tokens": 1142,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "memory_error": null,
+      "result": null,
+      "text": "Сними 8000 рублей",
+      "command_count": 3
+    }
+  ],
+  "checks": [
+    "store_reopen",
+    "separate_confirmations",
+    "explicit_preference_priority",
+    "one_off_choice",
+    "client_isolation"
+  ]
+}
